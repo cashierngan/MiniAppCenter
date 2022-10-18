@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-20T14:22:10 ICT" name="Suite" finished-at="2022-09-20T14:22:19 ICT" duration-ms="8172">
+    <groups>
+    </groups>
+    <test started-at="2022-09-20T14:22:10 ICT" name="Add Mini App" finished-at="2022-09-20T14:22:19 ICT" duration-ms="8172">
+      <class name="MiniAppCenter.TestCases.RegisterMiniAppPlanTest">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:MiniAppCenter.TestCases.RegisterMiniAppPlanTest@35a50a4c]" started-at="2022-09-20T14:22:10 ICT" name="createDriver" finished-at="2022-09-20T14:22:16 ICT" duration-ms="5955" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDriver -->
+        <test-method is-config="true" signature="RegisterMiniAppPlanTest()[pri:0, instance:MiniAppCenter.TestCases.RegisterMiniAppPlanTest@35a50a4c]" started-at="2022-09-20T14:22:16 ICT" name="RegisterMiniAppPlanTest" finished-at="2022-09-20T14:22:16 ICT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterMiniAppPlanTest -->
+        <test-method signature="registerMiniAppPlanSuccess()[pri:1, instance:MiniAppCenter.TestCases.RegisterMiniAppPlanTest@35a50a4c]" started-at="2022-09-20T14:22:16 ICT" name="registerMiniAppPlanSuccess" finished-at="2022-09-20T14:22:16 ICT" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMiniAppPlanSuccess -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:MiniAppCenter.TestCases.RegisterMiniAppPlanTest@35a50a4c]" started-at="2022-09-20T14:22:16 ICT" name="closeDriver" finished-at="2022-09-20T14:22:19 ICT" duration-ms="2115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- MiniAppCenter.TestCases.RegisterMiniAppPlanTest -->
+    </test> <!-- Add Mini App -->
+  </suite> <!-- Suite -->
+</testng-results>

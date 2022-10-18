@@ -1,6 +1,7 @@
 package MiniAppCenter.Pages;
 
 import driver.DriverManager;
+import helpers.PropertiesHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -9,7 +10,7 @@ import utils.WebUI;
 import java.io.IOException;
 import java.util.Map;
 
-public class RegisterPage {
+public class RegisterPage extends CommonPage{
     JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
 
     private By buttonRegister = By.xpath("//a[contains(text(),'Register')]");
@@ -128,8 +129,8 @@ public class RegisterPage {
 
     }
 
-    public void registerSuccessWithPhoneNumber(String URL, String phoneNumber01, String password, String confirmPw, String name, String code, String phoneNumber02, String phoneNumber03, String phoneNumberExist, String confirmPwInvalid, String phoneNumber, String codeInvalid) throws IOException {
-        WebUI.openURL(URL);
+    public void registerSuccessWithPhoneNumber(String phoneNumber01, String password, String confirmPw, String name, String code, String phoneNumber02, String phoneNumber03, String phoneNumberExist, String confirmPwInvalid, String phoneNumber, String codeInvalid) throws IOException {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonRegister);
         WebUI.setText(inputPhoneNumber, phoneNumber01);
         WebUI.setText(inputPassword, password);
@@ -265,21 +266,28 @@ public class RegisterPage {
 
     }
 
-    public void registerSuccessWithPhoneNumberNOTValid(String URL, String phoneNumber01, String password, String confirmPw, String name, String code, String phoneNumber02, String phoneNumber03, String phoneNumberExist, String confirmPwInvalid, String phoneNumber, String codeInvalid) throws IOException {
-        WebUI.openURL(URL);
-        WebUI.clickElement(buttonRegister);
-        WebUI.setText(inputPhoneNumber, phoneNumber);
-        WebUI.setText(inputPassword, password);
-        WebUI.setText(inputConfirmPassword, confirmPw);
-        WebUI.setText(inputName, name);
-        WebUI.clickElement(buttonSendCode);
-        WebUI.waitForElementVisible(messagesentOTP);
-        WebUI.setText(inputVerifyCode, code);
-        WebUI.clickElement(buttonSubmitRegister);
-        WebUI.waitForElementVisible(messageRegisterSuccess);
-        WebUI.verifyAssertTrueEqual(messageRegisterSuccess, "Register successfully", "Message Register successfully is NOT displayed");
-        WebUI.clickElement(buttonlogin);
-        WebUI.sleep(3);
+    public void registerSuccessWithPhoneNumberNOTValid(String phoneNumber01, String password, String confirmPw, String name, String code, String phoneNumber02, String phoneNumber03, String phoneNumberExist, String confirmPwInvalid, String phoneNumber, String codeInvalid) throws IOException {
+        try {
+            System.out.println("registerSuccessWithPhoneNumberNOTValid");
+            WebUI.openURL("https://mini-app-center.web.app/");
+            System.out.println("registerSuccessWithPhoneNumberNOTValid openURL");
+            WebUI.clickElement(buttonRegister);
+            WebUI.setText(inputPhoneNumber, phoneNumber);
+            WebUI.setText(inputPassword, password);
+            WebUI.setText(inputConfirmPassword, confirmPw);
+            WebUI.setText(inputName, name);
+            WebUI.clickElement(buttonSendCode);
+            WebUI.waitForElementVisible(messagesentOTP);
+            WebUI.setText(inputVerifyCode, code);
+            WebUI.clickElement(buttonSubmitRegister);
+            WebUI.waitForElementVisible(messageRegisterSuccess);
+            WebUI.verifyAssertTrueEqual(messageRegisterSuccess, "Register successfully", "Message Register successfully is NOT displayed");
+//            WebUI.clickElement(buttonlogin);
+            WebUI.sleep(3);
+        } catch (Exception error) {
+            System.out.println("registerSuccessWithPhoneNumberNOTValid exception");
+            System.out.println(error);
+        }
     }
 
 }

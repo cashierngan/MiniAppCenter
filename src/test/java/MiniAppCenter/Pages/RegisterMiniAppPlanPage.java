@@ -1,11 +1,9 @@
 package MiniAppCenter.Pages;
 
-import driver.DriverManager;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import utils.WebUI;
 
-public class RegisterMiniAppPlanPage {
+public class RegisterMiniAppPlanPage extends CommonPage{
 
     private By titleSetupInformation = By.xpath("//span[@class='title___b7qY_']");
     private By labelStep1 = By.xpath("//span[@class='title___b7qY_']");
@@ -30,47 +28,80 @@ public class RegisterMiniAppPlanPage {
     private By labelPhoneNumber = By.xpath("//span[normalize-space()='Phone Number *']");
     private By inputPhoneNumber = By.xpath("//input[@id='step2_phone']");
     private By buttonRegister = By.xpath("//button[@class='ant-btn ant-btn-default registerButton___11Knh']");
+
     private By menuMiniApps = By.xpath("//span[@class='ant-menu-title-content'][normalize-space()='Mini Apps']");
     private By titleMiniAppList = By.xpath("//div[@class='title___49HqJ']");
+    private By actionView = By.xpath("//span[@class='viewAction___2dWqD']");
+    private By messageRegisterSuccess =By.xpath("//div[@class='ant-notification-notice-description']");
 
-    private By buttonAddMiniApp = By.xpath("//button[normalize-space()='Add Mini App']");
+    public void viewMiniAppList(String menuName){
+        WebUI.waitForElementInvisible(messageRegisterSuccess);
+        WebUI.clickElement(By.xpath("//span[normalize-space()='" + menuName + "']"));
+        WebUI.clickElement(menuMiniApps);
+        WebUI.verifyAssertTrueEqual(titleMiniAppList, "MINI APP LIST", "Title MINI APP LIST is NOT displayed");
+    }
 
-
-    public void registerMiniAppPlanSuccess(String organization, String contactName, String title, String email, String phoneNumber, String menuMiniApp){
+    public void registerMiniAppPlanSuccessReactNative(String organization, String contactName, String title, String email, String phoneNumber, String menuMiniApp){
         WebUI.waitForElementVisible(DashboardPage.registerMiniAppPlan);
         WebUI.clickElement(DashboardPage.registerMiniAppPlan);
         WebUI.waitForElementVisible(titleSetupInformation);
-        WebUI.verifyAssertTruIsDisplayed(titleSetupInformation, "Form Register MiniApp Plan is NOT displayed");
-        WebUI.verifyAssertTruIsDisplayed(labelStep1,  "Step 1/2: Organization Information is NOT displayed");
-        WebUI.verifyAssertTruIsDisplayed(labelType, "Field Type is not displayed");
+        WebUI.verifyAssertTrueIsDisplayed(titleSetupInformation, "Form Register MiniApp Plan is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelStep1,  "Step 1/2: Organization Information is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelType, "Field Type is not displayed");
         WebUI.clickElement(inputType);
         WebUI.waitForElementVisible(selecTypeBusiness);
         WebUI.clickElement(selecTypeBusiness);
-        WebUI.verifyAssertTruIsDisplayed(labelOrganization, "Field Organization Name is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelOrganization, "Field Organization Name is NOT displayed");
         WebUI.setText(inputOrganizationName, organization);
-        WebUI.verifyAssertTruIsDisplayed(labelBusinessField, "Business Field is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelBusinessField, "Business Field is NOT displayed");
         WebUI.clickElement(inputBusinessField);
         WebUI.clickElement(selectShopping);
         WebUI.clickElement(buttonContinueStep2);
         WebUI.waitForElementVisible(labelStep2);
-        WebUI.verifyAssertTruIsDisplayed(labelStep2, "Contact information form is NOT dislayed");
-        WebUI.verifyAssertTruIsDisplayed(labelContactName, "Field Contact Name is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelStep2, "Contact information form is NOT dislayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelContactName, "Field Contact Name is NOT displayed");
         WebUI.setText(inputContactName, contactName);
-        WebUI.verifyAssertTruIsDisplayed(labelTitle, "Field Title is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelTitle, "Field Title is NOT displayed");
         WebUI.setText(inputTitle, title);
-        WebUI.verifyAssertTruIsDisplayed(labelEmailAddress, "Field Email Address is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelEmailAddress, "Field Email Address is NOT displayed");
         WebUI.setText(inputEmailAddress, email);
-        WebUI.verifyAssertTruIsDisplayed(labelPhoneNumber, "Field Phone number is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelPhoneNumber, "Field Phone number is NOT displayed");
         WebUI.setText(inputPhoneNumber, phoneNumber);
         WebUI.clickElement(buttonRegister);
         WebUI.sleep(6);
         WebUI.checkElementExist(By.xpath("//span[normalize-space()='" + menuMiniApp + "']"));
     }
 
-    public void viewMiniAppList(String menuName){
-        WebUI.clickElement(By.xpath("//span[normalize-space()='" + menuName + "']"));
-        WebUI.clickElement(menuMiniApps);
-        WebUI.verifyAssertTrueEqual(titleMiniAppList, "MINI APP LIST", "Title MINI APP LIST is NOT displayed");
-        WebUI.verifyAssertTruIsDisplayed(buttonAddMiniApp, "Add Mini App button is NOT displayed");
+    public void registerMiniAppPlanSuccessWebView(String organization, String contactName, String title, String email, String phoneNumber, String menuMiniApp){
+        WebUI.waitForElementVisible(DashboardPage.registerMiniAppPlan);
+        WebUI.clickElement(DashboardPage.registerMiniAppPlan);
+        WebUI.waitForElementVisible(titleSetupInformation);
+        WebUI.verifyAssertTrueIsDisplayed(titleSetupInformation, "Form Register MiniApp Plan is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelStep1,  "Step 1/2: Organization Information is NOT displayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelType, "Field Type is not displayed");
+        WebUI.clickElement(inputType);
+        WebUI.waitForElementVisible(selecTypeBusiness);
+        WebUI.clickElement(selecTypeBusiness);
+        WebUI.verifyAssertTrueIsDisplayed(labelOrganization, "Field Organization Name is NOT displayed");
+        WebUI.setText(inputOrganizationName, organization);
+        WebUI.verifyAssertTrueIsDisplayed(labelBusinessField, "Business Field is NOT displayed");
+        WebUI.clickElement(inputBusinessField);
+        WebUI.clickElement(selectShopping);
+        WebUI.clickElement(buttonContinueStep2);
+        WebUI.waitForElementVisible(labelStep2);
+        WebUI.verifyAssertTrueIsDisplayed(labelStep2, "Contact information form is NOT dislayed");
+        WebUI.verifyAssertTrueIsDisplayed(labelContactName, "Field Contact Name is NOT displayed");
+        WebUI.setText(inputContactName, contactName);
+        WebUI.verifyAssertTrueIsDisplayed(labelTitle, "Field Title is NOT displayed");
+        WebUI.setText(inputTitle, title);
+        WebUI.verifyAssertTrueIsDisplayed(labelEmailAddress, "Field Email Address is NOT displayed");
+        WebUI.setText(inputEmailAddress, email);
+        WebUI.verifyAssertTrueIsDisplayed(labelPhoneNumber, "Field Phone number is NOT displayed");
+        WebUI.setText(inputPhoneNumber, phoneNumber);
+        WebUI.clickElement(buttonRegister);
+        WebUI.sleep(6);
+        WebUI.checkElementExist(By.xpath("//span[normalize-space()='" + menuMiniApp + "']"));
     }
+
+
 }

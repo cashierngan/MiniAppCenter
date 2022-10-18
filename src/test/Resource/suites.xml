@@ -4,8 +4,9 @@
     <test name="Test Register">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="MiniAppCenter.TestCases.RegisterTest" />
-            <class name="MiniAppCenter.TestCases.LoginTest" />
+<!--            <class name="MiniAppCenter.TestCases.RegisterTest" />-->
+<!--            <class name="MiniAppCenter.TestCases.LoginTest" />-->
+            <class name="MiniAppCenter.TestCases.ApprovalMiniAppTest" />
         </classes>
     </test>
 </suite>
