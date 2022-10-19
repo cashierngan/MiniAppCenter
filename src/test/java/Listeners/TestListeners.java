@@ -1,14 +1,11 @@
 package Listeners;
 
 import com.aventstack.extentreports.Status;
-import driver.DriverManager;
 import helpers.CaptureHelpers;
-import io.qameta.allure.Attachment;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import reports.AllureReportManager;
 import reports.ExtentReportManager;
 import reports.ExtentTestManager;
 import utils.Log;
@@ -25,6 +22,8 @@ public class TestListeners implements ITestListener {
     public String getTestDescription(ITestResult result) {
         return result.getMethod().getDescription() != null ? result.getMethod().getDescription() : getTestName(result);
     }
+
+
 
     @Override
     public void onStart(ITestContext result) {
@@ -71,8 +70,9 @@ public class TestListeners implements ITestListener {
         ExtentTestManager.logMessage(Status.FAIL, getTestName(result) + " is failed");
 
         //Allure report
-        saveTextLog(result.getName());
-        saveScreenshotPNG();
+        Log.error("Screenshot captured for test case: " + getTestName(result));
+        AllureReportManager.saveTextLog(getTestName(result) + "is failed and screenshot taken!");
+        AllureReportManager.saveScreenshotPNG();
     }
 
     @Override
@@ -81,22 +81,6 @@ public class TestListeners implements ITestListener {
         ExtentTestManager.logMessage(Status.SKIP, getTestDescription(result) + " is skipped");
     }
 
-    //Text attachments for Allure
-    @Attachment(value = "{0}", type = "text/plain")
-    public static String saveTextLog(String message) {
-        return message;
-    }
 
-    //HTML attachments for Allure
-    @Attachment(value = "{0}", type = "text/html")
-    public static String attachHtml(String html) {
-        return html;
-    }
-
-    //Text attachments for Allure
-    @Attachment(value = "Page screenshot", type = "image/png")
-    public byte[] saveScreenshotPNG() {
-        return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
-    }
 
 }

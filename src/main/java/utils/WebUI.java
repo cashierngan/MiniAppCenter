@@ -27,6 +27,7 @@ public class WebUI {
     private final static int STEP_TIME = Integer.parseInt(PropertiesHelper.getValue("STEP_TIME"));;
     private final static int PAGE_LOAD_TIMEOUT = Integer.parseInt(PropertiesHelper.getValue("PAGE_LOAD_TIMEOUT"));;
 
+    @Step("Sleep {0} seconds")
     public static void sleep(long second){
         try {
             Thread.sleep(second*1000);
@@ -58,6 +59,7 @@ public class WebUI {
         return DriverManager.getDriver().findElement(by);
     }
 
+    @Step("Verrify Equal {1} on {0}")
     public static void verifyAssertTrueEqual(By by, String verifyText, String message){
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
@@ -65,6 +67,7 @@ public class WebUI {
         Assert.assertTrue(DriverManager.getDriver().findElement(by).getText().trim().equals(verifyText), message);
     }
 
+    @Step("Verify {1} is contains {2} on {0}")
     public static void verifyAssertTrueContain(By by, String attribute, String verifyText, String message){
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
@@ -72,6 +75,7 @@ public class WebUI {
         Assert.assertTrue(DriverManager.getDriver().findElement(by).getAttribute(attribute).contains(verifyText), message);
     }
 
+    @Step("Verify {0} is displayed")
     public static void verifyAssertTrueIsDisplayed(By by, String message){
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
@@ -98,6 +102,7 @@ public class WebUI {
         action.keyDown(Keys.COMMAND).sendKeys("a").keyUp(Keys.COMMAND).sendKeys(Keys.DELETE).build().perform();
     }
 
+    @Step("Key down Enter")
     public static void keydownEnter(){
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).build().perform();
@@ -129,24 +134,20 @@ public class WebUI {
         ExtentTestManager.logMessage(Status.PASS, "Set text: " + value + " on element " + by);
     }
     public static void waitForElementClick( By by){
-
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.elementToBeClickable(by));
-
     }
 
+    @Step("Visibility of element located {0}")
     public static void waitForElementVisible( By by){
-
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-
     }
 
+    @Step("Invisibility of element located {0}")
     public static void waitForElementInvisible( By by){
-
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
-
     }
 
     @Step("Open URL: {0}")

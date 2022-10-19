@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version>
+            <version>7.4.0</version>
         </dependency>
 
         <dependency>
@@ -100,7 +100,15 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.9.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -110,15 +118,15 @@
                     <version>3.0.0-M7</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <!-- Call Suite name global set up above -->
-                            <suiteXmlFile>src/test/java/suites/RunTestcases.xml</suiteXmlFile>
+                            <!-- Call Suite name -->
+                            <suiteXmlFile>suites/smokeTest.xml</suiteXmlFile>
                         </suiteXmlFiles>
                         <argLine>
                             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.9.1/aspectjweaver-1.9.9.1.jar"
                         </argLine>
                         <testFailureIgnore>true</testFailureIgnore>
                         <systemPropertyVariables>
-                            <allure.results.directory>target/allure-results</allure.results.directory>
+                            <allure.results.directory>allure-results</allure.results.directory>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>

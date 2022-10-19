@@ -15,10 +15,10 @@ public class RegisterMiniAppPlanTest extends BaseTest {
         excel1.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
         excel2.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "AddMiniApp");
 
-//        getRegisterPage().registerSuccessWithPhoneNumberNOTValid(excel.getCellData("username", 5), excel.getCellData("password", 3),
-//                excel.getCellData("password", 3), excel.getCellData("username", 6), excel.getCellData("code", 1),
-//                excel.getCellData("username", 7), excel.getCellData("username", 8), excel.getCellData("username", 10),
-//                excel.getCellData("password", 3), excel.getCellData("username", 11), excel.getCellData("password", 3));
+        getRegisterPage().registerSuccessWithPhoneNumberNOTValid(excel.getCellData("username", 5), excel.getCellData("password", 3),
+                excel.getCellData("password", 3), excel.getCellData("username", 6), excel.getCellData("code", 1),
+                excel.getCellData("username", 7), excel.getCellData("username", 8), excel.getCellData("username", 10),
+                excel.getCellData("password", 3), excel.getCellData("username", 11), excel.getCellData("password", 3));
         getLoginPage().loginWithGoogleAccountAdmin(excel.getCellData("username", 3), excel.getCellData("password", 4));
 
         getUserAuthorizationPage().userAuthorizationMiniappAdmin(excel.getCellData("username", 11), excel.getCellData("authorization", 1));
