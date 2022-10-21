@@ -17,17 +17,25 @@ app.get("/", function (req, res) {
 });
 
 app.get("/list-reports", function (req, res) {
+
+  const pageSize = Number(req?.query?.pageSize) || 10
+  const pageIndex = Number(req?.query?.pageIndex) || 1
+
   const dirPath = path.join(__dirname, "../ExtentReports/ExtentReport.html");
   const reportDirPath = path.join(__dirname, "/results");
-  const reportFiles = fs.readdirSync(reportDirPath);
+  const getReportFiles = fs.readdirSync(reportDirPath);
 
-  function getData() {
+  const reportFiles = getReportFiles.reverse()
+
+  const reportToGet = reportFiles.slice((pageIndex - 1) * pageSize, (pageSize * pageIndex))
+
+  const getData = () => {
     const fileList = [];
     const readFileAsync = promisify(fs.readFile);
     Promise.all(
-      reportFiles.map((fileReport) =>
-        readFileAsync(reportDirPath + `/${fileReport}`)
-      )
+      reportToGet.map((fileReport) => {
+        return readFileAsync(reportDirPath + `/${fileReport}`)
+      })
     ).then((listReportFiles) => {
       listReportFiles.forEach((file, index) => {
         const root = HTMLParser.parse(file.toString());
@@ -35,14 +43,17 @@ app.get("/list-reports", function (req, res) {
         const getName = root.querySelector(".test-detail .name");
         const getTimeCheck = root.querySelector(".badge.badge-success");
         fileList.push({
-          id: reportFiles[index].replace(".html", ""),
+          id: reportToGet[index].replace(".html", ""),
           time: getTimeCheck.rawText,
           description: getName.rawText,
           status: getStatus.rawText,
-          key: reportFiles[index].replace(".html", ""),
+          key: reportToGet[index].replace(".html", ""),
         });
       });
-      res.json(fileList);
+      res.json({
+        total: getReportFiles.length,
+        data: fileList
+      });
     });
   }
 
