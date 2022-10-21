@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from './table-result.module.scss';
 import { Space, Table, Tag } from 'antd';
-import type { ColumnsType, TableProps } from 'antd/es/table';
+import type { ColumnsType, TableProps, TablePaginationConfig } from 'antd/es/table';
 import Link from 'next/link';
 import axios from "axios";
 
@@ -11,6 +11,10 @@ interface DataType {
     time: string;
     description: string;
     status: string;
+}
+
+interface TableParams {
+  pagination?: TablePaginationConfig;
 }
 
 const columns: ColumnsType<DataType> = [
@@ -54,24 +58,39 @@ const columns: ColumnsType<DataType> = [
 
 const TableResult = () => {
 
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [listReports, setListReports] = useState<DataType[]>([])
+  const [tableParams, setTableParams] = useState<TableParams>({
+    pagination: {
+      current: 1,
+      pageSize: 10,
+    },
+  });
 
-  const handleLoadingChange = (enable: boolean) => {
-    setLoading(enable);
-  };
+  const getListReports = async () => {
+    setLoading(true)
+    const dataReport = await axios.get(`http://localhost:4000/list-reports?pageIndex=${tableParams.pagination?.current}&pageSize=${tableParams.pagination?.pageSize}`)
+    if(dataReport?.data) {
+      setListReports(dataReport.data.data)
+      setLoading(false)
+      setTableParams({
+        ...tableParams,
+        pagination: {
+          ...tableParams.pagination,
+          total: dataReport.data.total,
+        },
+      });
+    }
+  }
 
   useEffect(() => {
-    const getListReports = async () => {
-      const dataReport = await axios.get('http://localhost:4000/list-reports')
-      console.log("===>", dataReport)
-      if(dataReport?.data) {
-        setListReports(dataReport.data)
-        setLoading(false)
-      }
-    }
     getListReports()
-  }, [])
+  }, [JSON.stringify(tableParams)])
+
+  const handleTableChange = (pagination: TablePaginationConfig) => {
+    setLoading(true);
+    setTableParams({pagination});
+  };
 
   const tableProps: TableProps<DataType> = {
     loading,
@@ -84,6 +103,8 @@ const TableResult = () => {
               {...tableProps} 
               columns={columns} 
               dataSource={listReports ? listReports : []}
+              pagination={tableParams.pagination}
+              onChange={handleTableChange}
             />
         </div>
     )
