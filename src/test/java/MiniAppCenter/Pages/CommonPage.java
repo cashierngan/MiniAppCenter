@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class CommonPage {
 
-    public RegisterMiniAppPlanPage registerMiniAppPlanPage;
+    public RegisterMiniAppPage registerMiniAppPage;
     public LoginPage loginPage;
     public RegisterPage registerPage;
     public LogoutPage logoutPage;
@@ -59,11 +59,11 @@ public class CommonPage {
         return approvalMiniAppPage;
     }
 
-    public RegisterMiniAppPlanPage getRegisterMiniAppPlanPage(){
-        if (registerMiniAppPlanPage == null) {
-            registerMiniAppPlanPage = new RegisterMiniAppPlanPage();
+    public RegisterMiniAppPage getRegisterMiniAppPlanPage(){
+        if (registerMiniAppPage == null) {
+            registerMiniAppPage = new RegisterMiniAppPage();
         }
-        return registerMiniAppPlanPage;
+        return registerMiniAppPage;
     }
 
     public AppInfoPage getAppInfoPage(){

@@ -17,8 +17,13 @@ public class RolloutRequestPage {
     private By menuRolloutRequestList = By.xpath("//span[normalize-space()='Rollout Request List']");
     private By titleRolloutRequestList = By.xpath("//div[@class='title___49HqJ']");
     private By searchRequestRollout = By.xpath("//input[@placeholder='Search Request']");
-    private By actionViewRolloutRequestIOS = By.xpath("(//span[contains(text(),'View')])[1]");
-    private By actionViewRolloutRequestAndroid = By.xpath("(//span[contains(text(),'View')])[2]");
+    private By actionViewRolloutRequestIOS = By.xpath("(((//span[contains(text(),'Pending')]/parent::div)/parent::td)//following-sibling::td//span[normalize-space()='View'])[1]");
+    private By actionViewRolloutRequestAndroid = By.xpath("(((//span[contains(text(),'Pending')]/parent::div)/parent::td)//following-sibling::td//span[normalize-space()='View'])[2]");
+    private By actionViewToApproveIOS = By.xpath("(((//span[contains(text(),'Reviewing')]/parent::div)/parent::td)//following-sibling::td//span[normalize-space()='View'])[1]");
+    private By actionViewToApproveAndroid = By.xpath("(((//span[contains(text(),'Reviewing')]/parent::div)/parent::td)//following-sibling::td//span[normalize-space()='View'])[2]");
+
+    private By statusPendingIOS = By.xpath("(((//span[contains(text(),'View')]/parent::a)/parent::td)//preceding-sibling::td//span[normalize-space()='Pending'])[1]");
+    private By statusPendingAndroid = By.xpath("(((//span[contains(text(),'View')]/parent::a)/parent::td)//preceding-sibling::td//span[normalize-space()='Pending'])[2]");
     private By getTitleRolloutRequest = By.xpath("//div[normalize-space()='Rollout Request']");
     private By tabAssign = By.xpath("//div[@id='rc-tabs-1-tab-Assign']");
     private By inputAddMember = By.xpath("//div[@class='ant-select-selection-overflow']");
@@ -37,7 +42,7 @@ public class RolloutRequestPage {
     private By messageApproveSuccess = By.xpath("//span[normalize-space()='Approved rollout request successfully.']");
     private By outside = By.xpath("//div[@class='ant-table ant-table-small ant-table-ping-right ant-table-scroll-horizontal']//th[@class='ant-table-cell'][normalize-space()='App ID']");
 
-    public void rolloutRequest(String description){
+    public void rolloutRequestWebApp(String description){
 //        WebUI.clickElement(DashboardPage.menuBuild);
         WebUI.clickElement(menuBuildList);
         WebUI.verifyAssertTrueIsDisplayed(titleBuildList, "Build List page is NOT displayed");
@@ -53,12 +58,11 @@ public class RolloutRequestPage {
         WebUI.clickElement(rolloutRequestIOS);
 //        WebUI.verifyAssertTrueIsDisplayed(titleRolloutRequest, "Create rollout request is NOT displayed");
 //        WebUI.verifyAssertTrueIsDisplayed(labelIOS, "IOS label is NOT displayed");
-        WebUI.setText(inputRolloutDescription, description);
         WebUI.clickElement(buttonCreateRollout);
         WebUI.verifyAssertTrueIsDisplayed(messageRolloutRequestSuccess, "Rollout request is Failed");
     }
 
-    public void approveRolloutRequest(String appName, String asignacc, String noteApproveAndroid, String noteApproveIOS){
+    public void approveRolloutRequestWebApp(String appName, String asignacc, String noteApproveAndroid, String noteApproveIOS){
         WebUI.clickElement(DashboardPage.menuMiniAppManagement);
         WebUI.clickElement(menuRolloutRequestList);
         WebUI.sleep(7);
@@ -76,23 +80,25 @@ public class RolloutRequestPage {
         WebUI.clickElement(buttonConfirmAssign);
 //        WebUI.verifyAssertTrueIsDisplayed(messageAssignSuccess, "Assign is failed");
         WebUI.sleep(7);
+        WebUI.verifyAssertTrueEqual(statusPendingAndroid,"Pending", "Status is NOT Pending");
         WebUI.clickElement(actionViewRolloutRequestAndroid);
 //        WebUI.verifyAssertTrueEqual(titleRolloutRequest, "Rollout Request page is NOT displayed", "Rollout Request page is NOT displayed");
         WebUI.clickElement(buttonStartReview);
         WebUI.sleep(3);
         WebUI.verifyAssertTrueIsDisplayed(messageStartReviewSuccess, "Reviewing Mini App Android is failed");
+        WebUI.verifyAssertTrueEqual(statusPendingIOS,"Pending", "Status is NOT Pending");
         WebUI.clickElement(actionViewRolloutRequestIOS);
         WebUI.sleep(2);
 //        WebUI.verifyAssertTrueEqual(titleRolloutRequest, "Rollout Request page is NOT displayed", "Rollout Request page is NOT displayed");
         WebUI.clickElement(buttonStartReview);
         WebUI.sleep(3);
         WebUI.verifyAssertTrueIsDisplayed(messageStartReviewSuccess, "Reviewing Mini App IOS is failed");
-        WebUI.clickElement(actionViewRolloutRequestAndroid);
+        WebUI.clickElement(actionViewToApproveAndroid);
         WebUI.setText(inputNoteApprove, noteApproveAndroid);
         WebUI.clickElement(buttonApprove);
         WebUI.sleep(3);
         WebUI.verifyAssertTrueIsDisplayed(messageApproveSuccess, "Approve Mini App is failed");
-        WebUI.clickElement(actionViewRolloutRequestIOS);
+        WebUI.clickElement(actionViewToApproveIOS);
         WebUI.setText(inputNoteApprove, noteApproveIOS);
         WebUI.clickElement(buttonApprove);
         WebUI.sleep(3);
