@@ -4,7 +4,7 @@
     <test name="Add Mini App">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="MiniAppCenter.TestCases.RegisterMiniAppPlanTest" />
+            <class name="MiniAppCenter.TestCases.RegisterMiniAppTest" />
         </classes>
     </test>
 </suite>

@@ -61,9 +61,7 @@ public class MiniAppsPage extends CommonPage {
         WebUI.verifyAssertTrueIsDisplayed(messageAddMiniAppSuccess, "Add new Mini App failed");
         WebUI.clickElement(buttonCloseMessageSuccess);
         WebUI.sleep(2);
-        WebUI.clearText(inputSearchMiniApp);
-        WebUI.setText(inputSearchMiniApp, nameMiniApp);
-        WebUI.keydownEnter();
+        WebUI.setTextEnter(inputSearchMiniApp, nameMiniApp);
         WebUI.waitForElementVisible(By.xpath("//td[normalize-space()='" + nameMiniApp + "']"));
         WebUI.verifyAssertTrueIsDisplayed(By.xpath("//td[normalize-space()='" + nameMiniApp + "']"), "Mini App is NOT exist");
         WebUI.verifyAssertTrueEqual(miniappStatus, status, "Status Mini App is failed");

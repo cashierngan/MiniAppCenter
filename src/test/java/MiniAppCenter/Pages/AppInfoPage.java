@@ -1,6 +1,7 @@
 package MiniAppCenter.Pages;
 
 import driver.DriverManager;
+import helpers.Helpers;
 import org.openqa.selenium.By;
 import utils.WebUI;
 
@@ -24,7 +25,8 @@ public class AppInfoPage {
         WebUI.setText(inputShortDescription, shortDescription);
         WebUI.setText(inputCSPhoneNumber, phoneCS);
         WebUI.clickElement(uploadIcon);
-        DriverManager.getDriver().findElement(inputIcon).sendKeys(System.getProperty("user.dir") + "/src/main/resources/koi.jpeg");
+//        DriverManager.getDriver().findElement(inputIcon).sendKeys(System.getProperty("user.dir") + "/src/main/resources/koi.jpeg");
+        DriverManager.getDriver().findElement(inputIcon).sendKeys(Helpers.getCurrentDir2() +"datatest/cDeKMdQ.jpeg");
         WebUI.clickElement(buttonSaveChange);
         WebUI.verifyAssertTrueIsDisplayed(messageSaveAppInfoSuccess, "Save App Info is NOT successfully");
     }

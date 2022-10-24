@@ -4,14 +4,14 @@
   <test thread-count="5" name="Add Mini App(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="MiniAppCenter.TestCases.RegisterMiniAppPlanTest">
+      <class name="MiniAppCenter.TestCases.RegisterMiniAppTest">
         <methods>
           <include name="closeDriver"/>
           <include name="createDriver"/>
           <include name="RegisterMiniAppPlanTest"/>
           <include name="registerMiniAppPlanSuccess"/>
         </methods>
-      </class> <!-- MiniAppCenter.TestCases.RegisterMiniAppPlanTest -->
+      </class> <!-- MiniAppCenter.TestCases.RegisterMiniAppTest -->
     </classes>
   </test> <!-- Add Mini App(failed) -->
 </suite> <!-- Failed suite [Suite] -->

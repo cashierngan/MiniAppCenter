@@ -2229,3 +2229,361 @@
 [INFO] 19-10-2022 18:10:43 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Approved rollout request successfully.']
 [INFO] 19-10-2022 18:10:43 [main] Log - approveRolloutRequest is passed
 [INFO] 19-10-2022 18:10:45 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 11:00:03 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 11:00:12 [main] Log - registerMiniAppPlanSuccess test is starting...
+[INFO] 24-10-2022 11:00:44 [main] Log - Verify equals: Register successfully
+[ERROR] 24-10-2022 11:01:00 [main] Log - registerMiniAppPlanSuccess is failed
+[ERROR] 24-10-2022 11:01:00 [main] Log - Screenshot captured for test case: registerMiniAppPlanSuccess
+[INFO] 24-10-2022 11:01:04 [main] Log - ApprovalMiniApp test is starting...
+[INFO] 24-10-2022 11:02:35 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 11:02:42 [main] Log - registerMiniAppPlanSuccess test is starting...
+[INFO] 24-10-2022 11:03:13 [main] Log - Verify equals: Register successfully
+[INFO] 24-10-2022 11:04:13 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:04:46 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 11:04:46 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 11:04:46 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 11:04:48 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Organization Name *']
+[INFO] 24-10-2022 11:04:50 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 11:04:54 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 11:04:54 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 11:04:55 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Title']
+[INFO] 24-10-2022 11:04:57 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Email Address *']
+[INFO] 24-10-2022 11:04:58 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Phone Number *']
+[INFO] 24-10-2022 11:05:16 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:05:22 [main] Log - Verify displayed: By.xpath: //button[normalize-space()='Add Mini App']
+[INFO] 24-10-2022 11:05:26 [main] Log - Verify displayed: By.xpath: //div[@class='ant-modal-title']
+[INFO] 24-10-2022 11:05:27 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Name *']
+[INFO] 24-10-2022 11:05:28 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 11:05:31 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 11:05:34 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Service Scenario *']
+[INFO] 24-10-2022 11:05:37 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Description']
+[INFO] 24-10-2022 11:05:44 [main] Log - Verify displayed: By.xpath: //h4[normalize-space()='Mini App is added successfully!']
+[INFO] 24-10-2022 11:05:50 [main] Log - Verify displayed: By.xpath: //td[normalize-space()='Bear Coffee 19']
+[INFO] 24-10-2022 11:05:50 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 11:05:50 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 11:05:50 [main] Log - Verify equals: Go Company
+[INFO] 24-10-2022 11:05:50 [main] Log - Verify equals: Payment
+[INFO] 24-10-2022 11:05:50 [main] Log - registerMiniAppPlanSuccess is passed
+[INFO] 24-10-2022 11:05:55 [main] Log - ApprovalMiniApp test is starting...
+[INFO] 24-10-2022 11:06:58 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:07:04 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Pending']
+[INFO] 24-10-2022 11:07:06 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 11:07:06 [main] Log - Verify equals: Bear Coffee 19
+[INFO] 24-10-2022 11:07:06 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 11:07:12 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 11:07:12 [main] Log - ApprovalMiniApp is passed
+[INFO] 24-10-2022 11:07:18 [main] Log - configAppInfo test is starting...
+[INFO] 24-10-2022 11:07:56 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:08:12 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:08:13 [main] Log - Verify contain: Bear Coffee 19
+[INFO] 24-10-2022 11:08:21 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Updated Mini App info successfully']
+[INFO] 24-10-2022 11:08:21 [main] Log - configAppInfo is passed
+[INFO] 24-10-2022 11:08:26 [main] Log - buildMiniappReactNative test is starting...
+[INFO] 24-10-2022 11:09:08 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:09:21 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:09:22 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:13:32 [main] Log - Verify displayed: By.xpath: //div[@class='processText___XiJLZ']
+[INFO] 24-10-2022 11:13:32 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Request Rollout']
+[INFO] 24-10-2022 11:13:32 [main] Log - buildMiniappReactNative is passed
+[INFO] 24-10-2022 11:13:38 [main] Log - rolloutRequest test is starting...
+[INFO] 24-10-2022 11:14:17 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:14:30 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[ERROR] 24-10-2022 11:14:42 [main] Log - rolloutRequest is failed
+[ERROR] 24-10-2022 11:14:42 [main] Log - Screenshot captured for test case: rolloutRequest
+[INFO] 24-10-2022 11:14:47 [main] Log - approveRolloutRequest test is starting...
+[INFO] 24-10-2022 11:22:23 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 11:22:31 [main] Log - registerMiniAppPlanSuccess test is starting...
+[INFO] 24-10-2022 11:23:00 [main] Log - Verify equals: Register successfully
+[INFO] 24-10-2022 11:23:57 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:24:34 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 11:24:34 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 11:24:34 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 11:24:37 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Organization Name *']
+[INFO] 24-10-2022 11:24:38 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 11:24:43 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 11:24:43 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 11:24:44 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Title']
+[INFO] 24-10-2022 11:24:45 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Email Address *']
+[INFO] 24-10-2022 11:24:47 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Phone Number *']
+[INFO] 24-10-2022 11:25:03 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:25:09 [main] Log - Verify displayed: By.xpath: //button[normalize-space()='Add Mini App']
+[INFO] 24-10-2022 11:25:13 [main] Log - Verify displayed: By.xpath: //div[@class='ant-modal-title']
+[INFO] 24-10-2022 11:25:13 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Name *']
+[INFO] 24-10-2022 11:25:15 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 11:25:18 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 11:25:21 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Service Scenario *']
+[INFO] 24-10-2022 11:25:24 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Description']
+[INFO] 24-10-2022 11:25:31 [main] Log - Verify displayed: By.xpath: //h4[normalize-space()='Mini App is added successfully!']
+[INFO] 24-10-2022 11:25:36 [main] Log - Verify displayed: By.xpath: //td[normalize-space()='Bear Coffee 20']
+[INFO] 24-10-2022 11:25:37 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 11:25:37 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 11:25:37 [main] Log - Verify equals: Go Company
+[INFO] 24-10-2022 11:25:37 [main] Log - Verify equals: Payment
+[INFO] 24-10-2022 11:25:37 [main] Log - registerMiniAppPlanSuccess is passed
+[INFO] 24-10-2022 11:25:44 [main] Log - ApprovalMiniApp test is starting...
+[INFO] 24-10-2022 11:26:52 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:26:58 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Pending']
+[INFO] 24-10-2022 11:26:59 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 11:26:59 [main] Log - Verify equals: Bear Coffee 20
+[INFO] 24-10-2022 11:27:00 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 11:27:05 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 11:27:05 [main] Log - ApprovalMiniApp is passed
+[INFO] 24-10-2022 11:27:09 [main] Log - configAppInfo test is starting...
+[INFO] 24-10-2022 11:27:46 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:28:02 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:28:02 [main] Log - Verify contain: Bear Coffee 20
+[INFO] 24-10-2022 11:28:10 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Updated Mini App info successfully']
+[INFO] 24-10-2022 11:28:11 [main] Log - configAppInfo is passed
+[INFO] 24-10-2022 11:28:17 [main] Log - buildMiniappReactNative test is starting...
+[INFO] 24-10-2022 11:28:54 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:29:06 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:29:08 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:33:18 [main] Log - Verify displayed: By.xpath: //div[@class='processText___XiJLZ']
+[INFO] 24-10-2022 11:33:18 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Request Rollout']
+[INFO] 24-10-2022 11:33:18 [main] Log - buildMiniappReactNative is passed
+[INFO] 24-10-2022 11:33:23 [main] Log - rolloutRequest test is starting...
+[INFO] 24-10-2022 11:34:01 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:34:13 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:34:22 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[ERROR] 24-10-2022 11:34:37 [main] Log - rolloutRequest is failed
+[ERROR] 24-10-2022 11:34:37 [main] Log - Screenshot captured for test case: rolloutRequest
+[INFO] 24-10-2022 11:34:43 [main] Log - approveRolloutRequest test is starting...
+[INFO] 24-10-2022 11:35:25 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:35:35 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[ERROR] 24-10-2022 11:36:04 [main] Log - approveRolloutRequest is failed
+[ERROR] 24-10-2022 11:36:04 [main] Log - Screenshot captured for test case: approveRolloutRequest
+[INFO] 24-10-2022 11:36:06 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 11:43:43 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 11:43:50 [main] Log - approveRolloutRequest test is starting...
+[INFO] 24-10-2022 11:44:34 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:44:46 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[ERROR] 24-10-2022 11:45:15 [main] Log - approveRolloutRequest is failed
+[ERROR] 24-10-2022 11:45:16 [main] Log - Screenshot captured for test case: approveRolloutRequest
+[INFO] 24-10-2022 11:45:18 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 11:47:46 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 11:47:53 [main] Log - approveRolloutRequest test is starting...
+[INFO] 24-10-2022 11:48:37 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:48:48 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[ERROR] 24-10-2022 11:49:16 [main] Log - approveRolloutRequest is failed
+[ERROR] 24-10-2022 11:49:16 [main] Log - Screenshot captured for test case: approveRolloutRequest
+[INFO] 24-10-2022 11:49:18 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 11:50:22 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 11:50:29 [main] Log - rolloutRequest test is starting...
+[INFO] 24-10-2022 11:51:08 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 11:51:21 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:51:29 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[INFO] 24-10-2022 11:51:41 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[INFO] 24-10-2022 11:51:41 [main] Log - rolloutRequest is passed
+[INFO] 24-10-2022 11:51:47 [main] Log - approveRolloutRequest test is starting...
+[INFO] 24-10-2022 11:52:29 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 11:52:40 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 11:53:00 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 11:53:08 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 11:53:15 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Approved rollout request successfully.']
+[INFO] 24-10-2022 11:53:22 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Approved rollout request successfully.']
+[INFO] 24-10-2022 11:53:22 [main] Log - approveRolloutRequest is passed
+[INFO] 24-10-2022 11:53:25 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 14:03:29 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 14:03:35 [main] Log - registerForBussiness test is starting...
+[INFO] 24-10-2022 14:04:06 [main] Log - Verify equals: Register successfully
+[INFO] 24-10-2022 14:04:09 [main] Log - registerForBussiness is passed
+[INFO] 24-10-2022 14:04:13 [main] Log - authorizationForBussinessAccount test is starting...
+[INFO] 24-10-2022 14:05:15 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 14:05:20 [main] Log - registerForBussiness test is starting...
+[INFO] 24-10-2022 14:05:49 [main] Log - Verify equals: Register successfully
+[INFO] 24-10-2022 14:05:52 [main] Log - registerForBussiness is passed
+[INFO] 24-10-2022 14:05:56 [main] Log - authorizationForBussinessAccount test is starting...
+[INFO] 24-10-2022 14:07:06 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 14:07:19 [main] Log - authorizationForBussinessAccount is passed
+[INFO] 24-10-2022 14:07:24 [main] Log - addMiniApp test is starting...
+[INFO] 24-10-2022 14:08:05 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 14:08:05 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 14:08:05 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 14:08:08 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Organization Name *']
+[INFO] 24-10-2022 14:08:10 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 14:08:15 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 14:08:15 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 14:08:16 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Title']
+[INFO] 24-10-2022 14:08:17 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Email Address *']
+[INFO] 24-10-2022 14:08:19 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Phone Number *']
+[INFO] 24-10-2022 14:08:39 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 14:08:45 [main] Log - Verify displayed: By.xpath: //button[normalize-space()='Add Mini App']
+[INFO] 24-10-2022 14:08:49 [main] Log - Verify displayed: By.xpath: //div[@class='ant-modal-title']
+[INFO] 24-10-2022 14:08:49 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Name *']
+[INFO] 24-10-2022 14:08:51 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 14:08:54 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 14:08:57 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Service Scenario *']
+[INFO] 24-10-2022 14:09:00 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Description']
+[INFO] 24-10-2022 14:09:07 [main] Log - Verify displayed: By.xpath: //h4[normalize-space()='Mini App is added successfully!']
+[ERROR] 24-10-2022 14:09:12 [main] Log - addMiniApp is failed
+[ERROR] 24-10-2022 14:09:12 [main] Log - Screenshot captured for test case: addMiniApp
+[INFO] 24-10-2022 14:09:17 [main] Log - ApprovalMiniApp test is starting...
+[INFO] 24-10-2022 14:10:41 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 14:10:46 [main] Log - addMiniApp test is starting...
+[ERROR] 24-10-2022 14:11:36 [main] Log - addMiniApp is failed
+[ERROR] 24-10-2022 14:11:37 [main] Log - Screenshot captured for test case: addMiniApp
+[INFO] 24-10-2022 14:11:39 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 14:11:56 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 14:12:01 [main] Log - addMiniApp test is starting...
+[INFO] 24-10-2022 14:12:46 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 14:12:52 [main] Log - Verify displayed: By.xpath: //button[normalize-space()='Add Mini App']
+[INFO] 24-10-2022 14:12:56 [main] Log - Verify displayed: By.xpath: //div[@class='ant-modal-title']
+[INFO] 24-10-2022 14:12:56 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Name *']
+[INFO] 24-10-2022 14:12:58 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 14:13:01 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 14:13:04 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Service Scenario *']
+[INFO] 24-10-2022 14:13:07 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Description']
+[INFO] 24-10-2022 14:13:15 [main] Log - Verify displayed: By.xpath: //h4[normalize-space()='Mini App is added successfully!']
+[INFO] 24-10-2022 14:13:21 [main] Log - Verify displayed: By.xpath: //td[normalize-space()='Bear Coffee 21']
+[INFO] 24-10-2022 14:13:21 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 14:13:21 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 14:13:21 [main] Log - Verify equals: Go Company
+[INFO] 24-10-2022 14:13:21 [main] Log - Verify equals: Payment
+[INFO] 24-10-2022 14:13:21 [main] Log - addMiniApp is passed
+[INFO] 24-10-2022 14:13:23 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 15:01:43 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 15:01:48 [main] Log - approveRolloutRequestWebApp test is starting...
+[INFO] 24-10-2022 15:02:37 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 15:02:48 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 15:03:04 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 15:03:12 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 15:03:12 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 15:03:19 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[ERROR] 24-10-2022 15:03:29 [main] Log - approveRolloutRequestWebApp is failed
+[ERROR] 24-10-2022 15:03:30 [main] Log - Screenshot captured for test case: approveRolloutRequestWebApp
+[INFO] 24-10-2022 15:03:32 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 15:10:07 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 15:10:12 [main] Log - rolloutRequestWebApp test is starting...
+[INFO] 24-10-2022 15:10:55 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 15:11:07 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 15:11:16 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[INFO] 24-10-2022 15:11:25 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[INFO] 24-10-2022 15:11:25 [main] Log - rolloutRequestWebApp is passed
+[INFO] 24-10-2022 15:11:29 [main] Log - approveRolloutRequestWebApp test is starting...
+[INFO] 24-10-2022 15:12:12 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 15:12:24 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 15:12:39 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 15:12:46 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 15:12:46 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 15:12:54 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[ERROR] 24-10-2022 15:13:04 [main] Log - approveRolloutRequestWebApp is failed
+[ERROR] 24-10-2022 15:13:04 [main] Log - Screenshot captured for test case: approveRolloutRequestWebApp
+[INFO] 24-10-2022 15:13:07 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 15:14:25 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 15:14:30 [main] Log - rolloutRequestWebApp test is starting...
+[INFO] 24-10-2022 15:15:15 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 15:15:27 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 15:15:36 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[INFO] 24-10-2022 15:15:45 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Your rollout request has been created!']
+[INFO] 24-10-2022 15:15:45 [main] Log - rolloutRequestWebApp is passed
+[INFO] 24-10-2022 15:15:49 [main] Log - approveRolloutRequestWebApp test is starting...
+[INFO] 24-10-2022 15:16:36 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 15:16:47 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 15:17:01 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 15:17:08 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 15:17:09 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 15:17:16 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 15:17:23 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Approved rollout request successfully.']
+[INFO] 24-10-2022 15:17:30 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Approved rollout request successfully.']
+[INFO] 24-10-2022 15:17:30 [main] Log - approveRolloutRequestWebApp is passed
+[INFO] 24-10-2022 15:17:32 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:42:24 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 16:42:31 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:42:33 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:42:33 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:42:36 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 16:42:52 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 16:42:59 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:43:01 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:43:01 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:43:04 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 16:43:39 [main] Log - Start Testing mini-app-center
+[INFO] 24-10-2022 16:43:45 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:43:47 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:43:47 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:43:50 [main] Log - End Testingmini-app-center
+[INFO] 24-10-2022 16:44:50 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:44:55 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:44:57 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:44:57 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:45:00 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:45:54 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:46:01 [main] Log - ApprovalMiniApp test is starting...
+[ERROR] 24-10-2022 16:46:04 [main] Log - ApprovalMiniApp is failed
+[ERROR] 24-10-2022 16:46:04 [main] Log - Screenshot captured for test case: ApprovalMiniApp
+[INFO] 24-10-2022 16:46:08 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:46:08 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:46:08 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:46:10 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:46:55 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:47:01 [main] Log - registerForBussiness test is starting...
+[ERROR] 24-10-2022 16:47:03 [main] Log - registerForBussiness is failed
+[ERROR] 24-10-2022 16:47:03 [main] Log - Screenshot captured for test case: registerForBussiness
+[INFO] 24-10-2022 16:47:08 [main] Log - authorizationForBussinessAccount test is starting...
+[ERROR] 24-10-2022 16:47:08 [main] Log - authorizationForBussinessAccount is failed
+[ERROR] 24-10-2022 16:47:08 [main] Log - Screenshot captured for test case: authorizationForBussinessAccount
+[INFO] 24-10-2022 16:47:13 [main] Log - addMiniApp test is starting...
+[ERROR] 24-10-2022 16:47:13 [main] Log - addMiniApp is failed
+[ERROR] 24-10-2022 16:47:13 [main] Log - Screenshot captured for test case: addMiniApp
+[INFO] 24-10-2022 16:47:17 [main] Log - ApprovalMiniApp test is starting...
+[ERROR] 24-10-2022 16:47:18 [main] Log - ApprovalMiniApp is failed
+[ERROR] 24-10-2022 16:47:18 [main] Log - Screenshot captured for test case: ApprovalMiniApp
+[INFO] 24-10-2022 16:47:22 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:47:23 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:47:23 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:47:25 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:49:56 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:50:03 [main] Log - configAppInfo test is starting...
+[INFO] 24-10-2022 16:50:59 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:51:05 [main] Log - configAppInfo test is starting...
+[ERROR] 24-10-2022 16:51:50 [main] Log - configAppInfo is failed
+[ERROR] 24-10-2022 16:51:50 [main] Log - Screenshot captured for test case: configAppInfo
+[INFO] 24-10-2022 16:51:52 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:52:18 [main] Log - Start Testing Smoke Test flow Add - Approved - Build Mini App
+[INFO] 24-10-2022 16:52:24 [main] Log - registerForBussiness test is starting...
+[INFO] 24-10-2022 16:52:54 [main] Log - Verify equals: Register successfully
+[INFO] 24-10-2022 16:52:57 [main] Log - registerForBussiness is passed
+[INFO] 24-10-2022 16:53:01 [main] Log - authorizationForBussinessAccount test is starting...
+[INFO] 24-10-2022 16:54:12 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 16:54:26 [main] Log - authorizationForBussinessAccount is passed
+[INFO] 24-10-2022 16:54:31 [main] Log - addMiniApp test is starting...
+[INFO] 24-10-2022 16:55:08 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 16:55:08 [main] Log - Verify displayed: By.xpath: //span[@class='title___b7qY_']
+[INFO] 24-10-2022 16:55:08 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 16:55:11 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Organization Name *']
+[INFO] 24-10-2022 16:55:13 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 16:55:17 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 16:55:17 [main] Log - Verify displayed: By.xpath: //span[@class='stepText___1NsDK']
+[INFO] 24-10-2022 16:55:19 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Title']
+[INFO] 24-10-2022 16:55:20 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Email Address *']
+[INFO] 24-10-2022 16:55:21 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Phone Number *']
+[INFO] 24-10-2022 16:55:41 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 16:55:47 [main] Log - Verify displayed: By.xpath: //button[normalize-space()='Add Mini App']
+[INFO] 24-10-2022 16:55:51 [main] Log - Verify displayed: By.xpath: //div[@class='ant-modal-title']
+[INFO] 24-10-2022 16:55:51 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Name *']
+[INFO] 24-10-2022 16:55:53 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Type *']
+[INFO] 24-10-2022 16:55:56 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Business Field *']
+[INFO] 24-10-2022 16:55:59 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Service Scenario *']
+[INFO] 24-10-2022 16:56:02 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Description']
+[INFO] 24-10-2022 16:56:09 [main] Log - Verify displayed: By.xpath: //h4[normalize-space()='Mini App is added successfully!']
+[INFO] 24-10-2022 16:56:14 [main] Log - Verify displayed: By.xpath: //td[normalize-space()='Bear Coffee 21']
+[INFO] 24-10-2022 16:56:14 [main] Log - Verify equals: Pending
+[INFO] 24-10-2022 16:56:14 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 16:56:14 [main] Log - Verify equals: Go Company
+[INFO] 24-10-2022 16:56:14 [main] Log - Verify equals: Payment
+[INFO] 24-10-2022 16:56:14 [main] Log - addMiniApp is passed
+[INFO] 24-10-2022 16:56:20 [main] Log - ApprovalMiniApp test is starting...
+[INFO] 24-10-2022 16:57:25 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 16:57:31 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Pending']
+[INFO] 24-10-2022 16:57:33 [main] Log - Verify displayed: By.xpath: //div[@id='rcDialogTitle0']
+[INFO] 24-10-2022 16:57:33 [main] Log - Verify equals: Bear Coffee 21
+[INFO] 24-10-2022 16:57:33 [main] Log - Verify equals: Ngăn Ngăn Shop
+[INFO] 24-10-2022 16:57:38 [main] Log - Verify displayed: By.xpath: //div[@class='ant-notification-notice-message']
+[INFO] 24-10-2022 16:57:38 [main] Log - ApprovalMiniApp is passed
+[INFO] 24-10-2022 16:57:44 [main] Log - configAppInfo test is starting...
+[INFO] 24-10-2022 16:58:25 [main] Log - Verify equals: MINI APP LIST
+[INFO] 24-10-2022 16:58:42 [main] Log - Verify displayed: By.xpath: //div[@class='title___49HqJ']
+[INFO] 24-10-2022 16:58:42 [main] Log - Verify contain: Bear Coffee 21
+[INFO] 24-10-2022 16:58:50 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Updated Mini App info successfully']
+[INFO] 24-10-2022 16:58:50 [main] Log - configAppInfo is passed
+[INFO] 24-10-2022 16:58:52 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
