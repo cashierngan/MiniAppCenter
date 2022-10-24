@@ -39,7 +39,7 @@ app.get("/list-reports", function (req, res) {
     ).then((listReportFiles) => {
       listReportFiles.forEach((file, index) => {
         const root = HTMLParser.parse(file.toString());
-        const getStatus = root.querySelector(".badge.fail-bg.log.float-right");
+        const getStatus = root.querySelector(".badge.log.float-right");
         const getName = root.querySelector(".test-detail .name");
         const getTimeCheck = root.querySelector(".badge.badge-success");
         fileList.push({
@@ -52,6 +52,8 @@ app.get("/list-reports", function (req, res) {
       });
       res.json({
         total: getReportFiles.length,
+        pageSize: pageSize,
+        pageIndex: pageIndex,
         data: fileList
       });
     });
