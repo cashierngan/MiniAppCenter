@@ -1,14 +1,24 @@
 // import '../styles/globals.scss'
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.css';
 
-import type { AppProps } from 'next/app'
-import Layout from '../components/layout'
+import type { AppProps } from 'next/app';
+import Layout from '../components/layout';
+
+import { SWRConfig } from 'swr';
+import axiosClient from '../api';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <SWRConfig 
+      value={{ 
+        fetcher: (url) => axiosClient.get(url), 
+        shouldRetryOnError: false 
+      }}
+    >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SWRConfig>
   )
 }
 

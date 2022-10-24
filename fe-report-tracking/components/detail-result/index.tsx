@@ -19,7 +19,6 @@ const DetailReportComponent: React.FC<DetailReportType> = ({ reportId }) => {
             <div className={styles.back}>
                 <Link href={'/'}>
                     <a>
-                        <Image src="/arrow-left.svg" alt="Back" width={16} height={16} />
                         Back
                     </a>
                 </Link>
