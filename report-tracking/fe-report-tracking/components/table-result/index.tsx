@@ -94,7 +94,7 @@ const TableResult = () => {
     tableParams,
     {
       revalidateOnFocus: true,
-      refreshInterval: 1000 * 60 * 60,
+      // refreshInterval: 1000 * 60 * 60,
       refreshWhenOffline: true,
     }
   );
