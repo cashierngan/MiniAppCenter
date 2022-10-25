@@ -7,8 +7,8 @@
             <class name="MiniAppCenter.TestCases.RegisterMiniAppTest" />
             <class name="MiniAppCenter.TestCases.ApprovalMiniAppTest" />
             <class name="MiniAppCenter.TestCases.AppInfoTest" />
-<!--            <class name="MiniAppCenter.TestCases.BuildMiniAppTest" />-->
-<!--            <class name="MiniAppCenter.TestCases.RolloutRequestTest" />-->
+            <class name="MiniAppCenter.TestCases.BuildMiniAppTest" />
+            <class name="MiniAppCenter.TestCases.RolloutRequestTest" />
         </classes>
     </test>
 </suite>

@@ -26,7 +26,8 @@ public class AppInfoPage {
         WebUI.setText(inputCSPhoneNumber, phoneCS);
         WebUI.clickElement(uploadIcon);
 //        DriverManager.getDriver().findElement(inputIcon).sendKeys(System.getProperty("user.dir") + "/src/main/resources/koi.jpeg");
-        DriverManager.getDriver().findElement(inputIcon).sendKeys(Helpers.getCurrentDir2() +"datatest/cDeKMdQ.jpeg");
+//        DriverManager.getDriver().findElement(inputIcon).sendKeys(Helpers.getCurrentDir2() +"datatest/logoTheKoi.jpeg");
+        WebUI.setText(inputIcon, Helpers.getCurrentDir2() +"datatest/logoTheKoi.jpeg");
         WebUI.clickElement(buttonSaveChange);
         WebUI.verifyAssertTrueIsDisplayed(messageSaveAppInfoSuccess, "Save App Info is NOT successfully");
     }

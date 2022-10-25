@@ -84,6 +84,7 @@ public class WebUI {
     }
 
     public static void setValue(By by, String value){
+        waitForPageLoaded();
         JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
         js.executeScript("\"" + by + ".setAttribute('value'," + value + ")");
     }
@@ -94,6 +95,7 @@ public class WebUI {
     }
     @Step("Clear text: {0}")
     public static void clearText ( By by){
+        waitForPageLoaded();
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         sleep(STEP_TIME);
@@ -104,17 +106,12 @@ public class WebUI {
 
     @Step("Key down Enter")
     public static void keydownEnter(){
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).build().perform();
-    }
-
-    public static void keydownEsc(){
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
-        action.keyDown(Keys.ESCAPE).keyUp(Keys.ESCAPE).build().perform();
     }
 
     @Step("Set text {1} on {0}")
     public static void setText( By by, String value){
+        waitForPageLoaded();
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         sleep(STEP_TIME);

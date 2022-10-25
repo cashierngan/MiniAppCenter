@@ -8,6 +8,7 @@ public class Helpers {
         return current;
     }
 
+    // File.separator là ký tự phân cách thư mục máy tính
     public static String getCurrentDir2() {
         String current = System.getProperty("user.dir") + File.separator;
         return current;
