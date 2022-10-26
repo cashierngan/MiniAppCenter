@@ -35,7 +35,7 @@ public class RegisterMiniAppPage extends CommonPage{
     private By messageRegisterSuccess =By.xpath("//div[@class='ant-notification-notice-description']");
 
     public void viewMiniAppList(String menuName){
-        WebUI.waitForElementInvisible(messageRegisterSuccess);
+//        WebUI.waitForElementInvisible(messageRegisterSuccess);
         WebUI.clickElement(By.xpath("//span[normalize-space()='" + menuName + "']"));
         WebUI.clickElement(menuMiniApps);
         WebUI.verifyAssertTrueEqual(titleMiniAppList, "MINI APP LIST", "Title MINI APP LIST is NOT displayed");

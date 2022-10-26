@@ -23,7 +23,7 @@ app.get("/", function (req, res) {
 
 app.get("/run", (req, res) => {
   exec(
-    "cd /Users/ngan.dang/Testing/MiniAppCenter && mvn test --file /Users/ngan.dang/Testing/MiniAppCenter/pom.xml",
+    "cd /Users/ngan.dang/Testing/mini-app-center && mvn test --file /Users/ngan.dang/Testing/mini-app-center/pom.xml",
     function (error, stdout, stderr) {
       if (!error) {
         res.redirect("http://localhost:3000");

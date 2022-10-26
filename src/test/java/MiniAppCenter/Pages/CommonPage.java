@@ -9,7 +9,7 @@ public class CommonPage {
     public RegisterPage registerPage;
     public LogoutPage logoutPage;
     public UserAuthorizationPage userAuthorizationPage;
-    public MiniAppsPage miniAppsPage;
+    public AddMiniAppsPage addMiniAppsPage;
     public ApprovalMiniAppPage approvalMiniAppPage;
     public AppInfoPage appInfoPage;
     public BuildMiniAppPage buildMiniAppPage;
@@ -45,11 +45,11 @@ public class CommonPage {
         return userAuthorizationPage;
     }
 
-    public MiniAppsPage getMiniAppPage(){
-        if (miniAppsPage == null) {
-            miniAppsPage = new MiniAppsPage();
+    public AddMiniAppsPage getMiniAppPage(){
+        if (addMiniAppsPage == null) {
+            addMiniAppsPage = new AddMiniAppsPage();
         }
-        return miniAppsPage;
+        return addMiniAppsPage;
     }
 
     public ApprovalMiniAppPage getApprovalMiniAppPage(){

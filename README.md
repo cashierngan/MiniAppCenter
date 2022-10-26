@@ -9,3 +9,8 @@
 - yarn start
 - Chrome: http://localhost:4000/run
 - 10.40.114.166:4000/run
+
+## run report tracking
+- FE: yarn build && yarn start
+- BE: yarn start
+- yarn install
