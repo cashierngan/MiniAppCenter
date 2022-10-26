@@ -28,7 +28,7 @@ app.get("/getVersion", async function (req, res) {
   const playStoreUrl = "https://play.google.com/store/apps/details?id=com.mservice.momotransfer";
   const appStoreUrl = "https://apps.apple.com/vn/app/momo-chuy%E1%BB%83n-ti%E1%BB%81n-thanh-to%C3%A1n/id918751511";
 
-  async function getAppStoreVersion() {
+  async function getPlayStoreVersion() {
     const response = await axios(playStoreUrl);
     const dom = new JSDOM(response.data);
     const scripts = Array.from(dom.window.document.querySelectorAll("script"));
@@ -40,7 +40,7 @@ app.get("/getVersion", async function (req, res) {
     return version;
   }
 
-  async function getPlayStoreVersion() {
+  async function getAppStoreVersion() {
     const res = await axios(appStoreUrl);
     const root = HTMLParser.parse(res.data.toString());
     const getStatus = root.querySelector(".whats-new__latest__version");
@@ -109,14 +109,27 @@ app.get("/list-reports", function (req, res) {
       ).then((listReportFiles) => {
         listReportFiles.forEach((file, index) => {
           const root = HTMLParser.parse(file.toString());
-          const getStatus = root.querySelector(".badge.log.float-right");
+          const getCountStatusSuccess = root.querySelectorAll(".badge.pass-bg.log.float-right")?.length || 0;
+          const getCountStatusFail = root.querySelectorAll(".badge.fail-bg.log.float-right")?.length || 0;
           const getName = root.querySelector(".test-detail .name");
           const getTimeCheck = root.querySelector(".badge.badge-success");
           fileList.push({
             id: reportToGet[index].replace(".html", ""),
             time: getTimeCheck.rawText,
             description: getName.rawText,
-            status: getStatus.rawText,
+            status: {
+              totalIssue: Number(getCountStatusSuccess + getCountStatusFail),
+              detail: [
+                {
+                  statusName: "Passed",
+                  count: getCountStatusSuccess,
+                },
+                {
+                  statusName: "Failed",
+                  count: getCountStatusFail,
+                },
+              ]
+            },
             key: reportToGet[index].replace(".html", ""),
           });
         });
@@ -141,21 +154,13 @@ app.get("/list-reports", function (req, res) {
   function createUid(data) {
     const date = new Date(data);
     const year = date.getFullYear();
-    const month =
-      date.getMonth() + 1 < 10
-        ? `0${date.getMonth() + 1}`
-        : date.getMonth() + 1;
+    const month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
     const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
     const hour = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
-    const min =
-      date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+    const min = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
 
     return (
-      `${year.toString().slice(-2)}` +
-      `${month}` +
-      `${day}` +
-      `${hour}` +
-      `${min}`
+      `${year.toString().slice(-2)}` + `${month}` + `${day}` + `${hour}` + `${min}`
     );
   }
 
@@ -171,10 +176,7 @@ app.get("/list-reports", function (req, res) {
           getData();
         } else {
           fs.writeFileSync("./logs.txt", changeTime);
-          const resultDirPath = path.join(
-            __dirname,
-            "/results/" + createUid(stats.mtime) + ".html"
-          );
+          const resultDirPath = path.join(__dirname, "/results/" + createUid(stats.mtime) + ".html");
           fs.copyFile(dirPath, resultDirPath, (err) => {
             if (err) throw err;
             getData();
@@ -192,10 +194,7 @@ app.get("/list-reports", function (req, res) {
 
 app.get("/report/:fileName", function (req, res) {
   try {
-    const resultDirpath = path.join(
-      __dirname,
-      "/results/" + req.params.fileName + ".html"
-    );
+    const resultDirpath = path.join(__dirname, "/results/" + req.params.fileName + ".html");
     res.sendFile(resultDirpath);
   } catch (error) {
     console.log(error);

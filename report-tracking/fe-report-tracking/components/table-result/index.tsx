@@ -14,7 +14,13 @@ interface DataType {
   id: string;
   time: string;
   description: string;
-  status: string;
+  status: {
+    totalIssue: number;
+    detail: {
+      statusName: string;
+      count: number;
+    }[];
+  };
 }
 
 interface TableParams {
@@ -27,7 +33,13 @@ interface ListReportsProps {
       id: string;
       description: string;
       key: string;
-      status: string;
+      status: {
+        totalIssue: number;
+        detail: {
+          statusName: string;
+          count: number;
+        }[];
+      };
       time: string;
     }[];
     pageIndex: number;
@@ -62,10 +74,32 @@ const columns: ColumnsType<DataType> = [
     title: "Status",
     key: "status",
     dataIndex: "status",
-    render: (status) => (
-      <Tag color={status === "Fail" ? "volcano" : "green"}>
-        {status.toUpperCase()}
-      </Tag>
+    render: (_, { status }) => (
+      <>
+        {status.detail.map((item, index) => {
+          if(item.count === status.totalIssue){
+            return (
+              <div key={index}>
+                <Tag color={item.statusName === "Failed" ? "volcano" : "green"}>
+                  {item.statusName.toUpperCase()}
+                </Tag>
+              </div>
+            );
+          } else {
+            if(item.count > 0 && item.statusName === 'Failed') {
+              return (
+                <div key={index}>
+                  <Tag color="volcano">
+                    {item.statusName.toUpperCase()}
+                    {" "}
+                    {item.count !== status.totalIssue && <span>{item.count}/{status.totalIssue}</span>}
+                  </Tag>
+                </div>
+              )
+            }
+          }
+        })}
+      </>
     ),
   },
   {
