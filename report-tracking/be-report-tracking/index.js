@@ -4,9 +4,12 @@ const fs = require("fs");
 const HTMLParser = require("node-html-parser");
 const { promisify } = require("util");
 const exec = require("child_process").exec;
-
-const app = express();
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const axios = require("axios");
+const hostname = "localhost";
 const port = 4000;
+const app = express();
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -19,6 +22,49 @@ app.use(function (req, res, next) {
 
 app.get("/", function (req, res) {
   res.send("Report API!");
+});
+
+app.get("/getVersion", async function (req, res) {
+  const playStoreUrl = "https://play.google.com/store/apps/details?id=com.mservice.momotransfer";
+  const appStoreUrl = "https://apps.apple.com/vn/app/momo-chuy%E1%BB%83n-ti%E1%BB%81n-thanh-to%C3%A1n/id918751511";
+
+  async function getAppStoreVersion() {
+    const response = await axios(playStoreUrl);
+    const dom = new JSDOM(response.data);
+    const scripts = Array.from(dom.window.document.querySelectorAll("script"));
+    const script = scripts.find((s) => s.textContent && s.textContent.includes("/store/apps/developer"));
+    const versionStringRegex = /"[0-9]+\.[0-9]+\.[0-9.]+"/g;
+    const matches = script.textContent.match(versionStringRegex);
+    const match = matches[0] ?? null;
+    const version = match?.replace(/"/g, "") ?? "N/A";
+    return version;
+  }
+
+  async function getPlayStoreVersion() {
+    const res = await axios(appStoreUrl);
+    const root = HTMLParser.parse(res.data.toString());
+    const getStatus = root.querySelector(".whats-new__latest__version");
+    const rawText = getStatus?.rawText || "";
+    const version = rawText?.replace("Version", "").trim() ?? "N/A";
+    return version;
+  }
+
+  try {
+    const [appStoreVersion, playStoreVersion] = await Promise.all([
+      getAppStoreVersion(),
+      getPlayStoreVersion(),
+    ]);
+
+    res.json({
+      playStoreVersion: playStoreVersion,
+      appStoreVersion: appStoreVersion,
+    });
+  } catch (error) {
+    console.log(error);
+    res.json({
+      error: error,
+    });
+  }
 });
 
 app.get("/run", (req, res) => {
@@ -138,17 +184,28 @@ app.get("/list-reports", function (req, res) {
     });
   } catch (error) {
     console.log(error);
+    res.json({
+      error: error,
+    });
   }
 });
 
 app.get("/report/:fileName", function (req, res) {
-  const resultDirpath = path.join(
-    __dirname,
-    "/results/" + req.params.fileName + ".html"
-  );
-  res.sendFile(resultDirpath);
+  try {
+    const resultDirpath = path.join(
+      __dirname,
+      "/results/" + req.params.fileName + ".html"
+    );
+    res.sendFile(resultDirpath);
+  } catch (error) {
+    console.log(error);
+    res.json({
+      error: error,
+    });
+  }
 });
 
-app.listen(port, function () {
-  console.log(`Example app listening on port ${port}!`);
+app.listen(port, function (err) {
+  if (err) throw err;
+  console.log(`> Ready on http://${hostname}:${port}`);
 });
