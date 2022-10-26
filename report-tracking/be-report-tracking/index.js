@@ -11,6 +11,8 @@ const hostname = "localhost";
 const port = 4000;
 const app = express();
 
+let isRunning = false;
+
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -68,9 +70,16 @@ app.get("/getVersion", async function (req, res) {
 });
 
 app.get("/run", (req, res) => {
+  if (isRunning) {
+    return res.json({
+      error: "There is already a running job!"
+    })
+  }
+  isRunning = true;
   exec(
     "cd /Users/ngan.dang/Testing/mini-app-center && mvn test --file /Users/ngan.dang/Testing/mini-app-center/pom.xml",
     function (error, stdout, stderr) {
+      isRunning = false;
       if (!error) {
         res.redirect("http://localhost:3000");
       } else {
@@ -82,7 +91,6 @@ app.get("/run", (req, res) => {
     }
   );
 });
-
 app.get("/list-reports", function (req, res) {
   const pageSize = Number(req?.query?.pageSize) || 10;
   const pageIndex = Number(req?.query?.pageIndex) || 1;
