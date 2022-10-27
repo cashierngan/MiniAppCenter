@@ -81,7 +81,7 @@ app.get("/run", (req, res) => {
     function (error, stdout, stderr) {
       isRunning = false;
       if (!error) {
-        res.redirect("http://localhost:3000");
+        res.redirect("http://10.40.114.166:3000");
       } else {
         res.json({
           status: "failed",

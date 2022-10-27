@@ -23,7 +23,7 @@ const DetailReportComponent: React.FC<DetailReportType> = ({ reportId }) => {
                     </a>
                 </Link>
             </div>
-            <iframe src={`http://localhost:4000/report/${reportId}`} className={styles.iframe}></iframe>
+            <iframe src={`http://10.40.114.166:4000/report/${reportId}`} className={styles.iframe}></iframe>
         </div>
     </>
   )

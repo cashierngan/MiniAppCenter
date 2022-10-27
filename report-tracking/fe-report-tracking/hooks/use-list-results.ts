@@ -10,7 +10,7 @@ export function useListReports(tableParams: TableParams, options?: Partial<Publi
   const {
 		data: dataReports,
 		error,
-	}: SWRResponse = useSWR(`http://localhost:4000/list-reports?pageIndex=${tableParams.pagination?.current}&pageSize=${tableParams.pagination?.pageSize}`, {
+	}: SWRResponse = useSWR(`http://10.40.114.166:4000/list-reports?pageIndex=${tableParams.pagination?.current}&pageSize=${tableParams.pagination?.pageSize}`, {
 		...options,
 	})
 
