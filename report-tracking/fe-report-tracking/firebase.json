@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist",
     "site": "mac-testing",
     "ignore": [
       "firebase.json",
@@ -10,18 +10,8 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "nextServerß"
+        "destination": "/index.html"
       }
-    ]
-  },
-  "functions": {
-    "source": ".",
-    "runtime": "nodejs16",
-    "ignore": [
-      ".firebase/**",
-      ".firebaserc",
-      "firebase.json",
-      "**/node_modules/**"
     ]
   }
 }

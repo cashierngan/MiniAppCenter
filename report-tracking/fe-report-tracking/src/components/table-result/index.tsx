@@ -4,7 +4,7 @@ import type {
   TablePaginationConfig,
   TableProps,
 } from "antd/es/table";
-import Link from "next/link";
+import { Link } from 'react-router-dom'
 import { useState } from "react";
 import { useListReports } from "../../hooks";
 import styles from "./table-result.module.scss";
@@ -55,8 +55,8 @@ const columns: ColumnsType<DataType> = [
     dataIndex: "id",
     key: "id",
     render: (id) => (
-      <Link href={`/${id}`}>
-        <a>{id}</a>
+      <Link to={`/${id}`}>
+        {id}
       </Link>
     ),
   },
@@ -96,6 +96,8 @@ const columns: ColumnsType<DataType> = [
                   </Tag>
                 </div>
               )
+            } else {
+              return <></>
             }
           }
         })}
@@ -107,8 +109,8 @@ const columns: ColumnsType<DataType> = [
     key: "action",
     dataIndex: "id",
     render: (id) => (
-      <Link href={`/${id}`}>
-        <a>View</a>
+      <Link to={`/${id}`}>
+        View
       </Link>
     ),
   },

@@ -6,10 +6,10 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => (
-    <>
-        <Header/>
-        <main>{props.children}</main>
-    </>
+  <>
+    <Header/>
+    <main>{props.children}</main>
+  </>
 )
 
 export default Layout
