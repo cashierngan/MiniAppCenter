@@ -1,6 +1,7 @@
 package MiniAppCenter.Pages;
 
 import org.openqa.selenium.By;
+import utils.WebUI;
 
 public class DashboardPage {
 
@@ -13,5 +14,18 @@ public class DashboardPage {
 
     public static By menuSystemManagement = By.xpath("//span[normalize-space()='System Management']");
 
+    public static By namFolder = By.xpath("//span[contains(text(),'Nam Test')]");
 
+    public static By miniAppCatogery = By.xpath("//*[@class='ant-menu-title-content' and contains(text(),'Mini Apps')]");
+
+    public static By viewButton = By.xpath("//span[contains(text(),'View')]");
+
+    public void accessIntoAMiniApp (By miniAppPlanFolder, By miniAppCatogery, By viewButton) {
+        WebUI.waitForElementVisible(miniAppPlanFolder);
+        WebUI.clickElement(miniAppPlanFolder);
+        WebUI.waitForElementVisible(miniAppCatogery);
+        WebUI.clickElement(miniAppCatogery);
+        WebUI.waitForElementVisible(viewButton);
+        WebUI.clickElement(viewButton);
+    }
 }

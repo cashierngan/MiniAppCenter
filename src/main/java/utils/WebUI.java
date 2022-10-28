@@ -17,6 +17,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class WebUI {
     private static Actions action = new Actions(DriverManager.getDriver());
@@ -66,6 +67,16 @@ public class WebUI {
         Assert.assertTrue(DriverManager.getDriver().findElement(by).isDisplayed(), message);
     }
 
+    public static boolean isElementDisplayed(By by){
+        try {
+            WebElement locator;
+            locator = DriverManager.getDriver().findElement(by);
+            return locator.isDisplayed();
+        }catch (NoSuchElementException e){
+            return false;
+        }
+    }
+
     public static List<WebElement> getWebElements(By by){
         return DriverManager.getDriver().findElements(by);
     }
@@ -105,7 +116,12 @@ public class WebUI {
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 
     }
+    public static void waitForElementinVisible( By by){
 
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+
+    }
     public static void openURL( String URL){
         DriverManager.getDriver().get(URL);
         logConsole("Open URL: " + URL);
@@ -115,7 +131,7 @@ public class WebUI {
     public static String getElementText( By by){
         waitForElementVisible(by);
         sleep(STEP_TIME);
-        return getWebElement(by).getText(); // trả về 1 giá trị String
+        return getWebElement(by).getText(); // trả về 1 giá trị  String
     }
     public static void logConsole (Object message){
         System.out.println(message);
