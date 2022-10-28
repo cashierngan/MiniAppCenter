@@ -10,7 +10,7 @@ const DetailReportComponent: React.FC = () => {
       <div className={styles.back}>
         <Link to={'/'}>Back</Link>
       </div>
-      <iframe title={reportId.toString()} src={`http://10.40.114.166:4000/report/${reportId}`} className={styles.iframe}></iframe>
+      <iframe title={reportId.toString()} src={`https://api.mservice.com.vn:8001/automation-test/report-detail/${reportId}`} className={styles.iframe}></iframe>
     </div>
   )
 }
