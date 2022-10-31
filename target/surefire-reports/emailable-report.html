@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Smoke Test flow Add - Approved - Build Mini App</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">653,924</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke Test flow Add - Approved - Build Mini App &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">MiniAppCenter.TestCases.AddMiniAppTest</td><td><a href="#m0">addMiniAppReactNative</a></td><td rowspan="1">1666693743060</td><td rowspan="1">61027</td></tr><tr class="failedodd"><td rowspan="1">MiniAppCenter.TestCases.AppInfoTest</td><td><a href="#m1">configAppInfo</a></td><td rowspan="1">1666693856919</td><td rowspan="1">41767</td></tr><tr class="failedeven"><td rowspan="1">MiniAppCenter.TestCases.ApprovalMiniAppTest</td><td><a href="#m2">ApprovalMiniApp</a></td><td rowspan="1">1666693807454</td><td rowspan="1">46137</td></tr><tr class="failedodd"><td rowspan="1">MiniAppCenter.TestCases.RegisterMiniAppTest</td><td><a href="#m3">authorizationForBussinessAccount</a></td><td rowspan="1">1666693694668</td><td rowspan="1">45107</td></tr><tr><th colspan="4">Smoke Test flow Add - Approved - Build Mini App &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">MiniAppCenter.TestCases.BuildMiniAppTest</td><td><a href="#m4">buildMiniappReactNative</a></td><td rowspan="1">1666693901962</td><td rowspan="1">286918</td></tr><tr class="passedodd"><td rowspan="1">MiniAppCenter.TestCases.RegisterMiniAppTest</td><td><a href="#m5">registerForBussiness</a></td><td rowspan="1">1666693673434</td><td rowspan="1">18180</td></tr><tr class="passedeven"><td rowspan="2">MiniAppCenter.TestCases.RolloutRequestTest</td><td><a href="#m6">approveRolloutRequestWebApp</a></td><td rowspan="1">1666694243466</td><td rowspan="1">79300</td></tr><tr class="passedeven"><td><a href="#m7">rolloutRequestWebApp</a></td><td rowspan="1">1666694192015</td><td rowspan="1">48276</td></tr></tbody>
+</table>
+<h2>Smoke Test flow Add - Approved - Build Mini App</h2><h3 id="m0">MiniAppCenter.TestCases.AddMiniAppTest#addMiniAppReactNative</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[normalize-space()=&apos;Add Mini App&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62526}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62526/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a7738c0848ea1c2a97f6b05f18d46f0e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.WebUI.verifyAssertTrueIsDisplayed(WebUI.java:81)
+	at MiniAppCenter.Pages.AddMiniAppsPage.addMiniAppReactNativeSuccess(AddMiniAppsPage.java:40)
+	at MiniAppCenter.TestCases.AddMiniAppTest.addMiniAppReactNative(AddMiniAppTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">MiniAppCenter.TestCases.AppInfoTest#configAppInfo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[normalize-space()=&apos;View&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62638/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f49646ec414e3a8135fa5113fc8654d9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.WebUI.clickElement(WebUI.java:42)
+	at MiniAppCenter.Pages.AddMiniAppsPage.searchAndViewMiniApp(AddMiniAppsPage.java:116)
+	at MiniAppCenter.TestCases.AppInfoTest.configAppInfo(AppInfoTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">MiniAppCenter.TestCases.ApprovalMiniAppTest#ApprovalMiniApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class=&apos;userName___1zGMg anticon&apos; and normalize-space() = &apos;Đặng Thị Thu Ngân - ITC - APP - Senior Tester&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62581}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62581/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 354e5e0bfd8911b16d34272ececbf9e4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.WebUI.waitForElementVisible(WebUI.java:141)
+	at MiniAppCenter.Pages.LoginPage.loginWithGoogleAccountAdmin(LoginPage.java:138)
+	at MiniAppCenter.TestCases.ApprovalMiniAppTest.ApprovalMiniApp(ApprovalMiniAppTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">MiniAppCenter.TestCases.RegisterMiniAppTest#authorizationForBussinessAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class=&apos;userName___1zGMg anticon&apos; and normalize-space() = &apos;Đặng Thị Thu Ngân - ITC - APP - Senior Tester&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62473}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62473/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c6a5298745489aa33183cfa5cce9d58b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.WebUI.waitForElementVisible(WebUI.java:141)
+	at MiniAppCenter.Pages.LoginPage.loginWithGoogleAccountAdmin(LoginPage.java:138)
+	at MiniAppCenter.TestCases.RegisterMiniAppTest.authorizationForBussinessAccount(RegisterMiniAppTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">MiniAppCenter.TestCases.BuildMiniAppTest#buildMiniappReactNative</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">MiniAppCenter.TestCases.RegisterMiniAppTest#registerForBussiness</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">MiniAppCenter.TestCases.RolloutRequestTest#approveRolloutRequestWebApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">MiniAppCenter.TestCases.RolloutRequestTest#rolloutRequestWebApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

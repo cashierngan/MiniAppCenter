@@ -1,19 +1,22 @@
 package Common;
 
+import Listeners.TestListeners;
 import MiniAppCenter.Pages.CommonPage;
 import driver.DriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
+import java.io.File;
 
+@Listeners(TestListeners.class)
 public class BaseTest extends CommonPage {
     @BeforeMethod
     @Parameters({"browser"})
@@ -71,9 +74,7 @@ public class BaseTest extends CommonPage {
     }
 
     @AfterMethod
-    public static void closeDriver() {
-        WebDriver driver;
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0)); //Reset timeout
+    public static void closeDriver(ITestResult result) {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -82,6 +83,25 @@ public class BaseTest extends CommonPage {
 
         if (DriverManager.getDriver() != null) {
             DriverManager.quit();
+        }
+
+        if (ITestResult.FAILURE == result.getStatus()) {
+            try {
+                // Tạo tham chiếu của TakesScreenshot
+                TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
+                // Gọi hàm capture screenshot - getScreenshotAs
+                File source = ts.getScreenshotAs(OutputType.FILE);
+                //Kiểm tra folder tồn tại. Nêu không thì tạo mới folder
+                File theDir = new File("./Screenshots/");
+                if (!theDir.exists()) {
+                    theDir.mkdirs();
+                }
+                // result.getName() lấy tên của test case xong gán cho tên File chụp màn hình
+                FileHandler.copy(source, new File("./Screenshots/" + result.getName() + ".png"));
+                System.out.println("Đã chụp màn hình: " + result.getName());
+            } catch (Exception e) {
+                System.out.println("Exception while taking screenshot " + e.getMessage());
+            }
         }
     }
 }

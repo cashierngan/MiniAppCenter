@@ -1,14 +1,15 @@
 package MiniAppCenter.Pages;
-import Common.BaseTest;
+
 import driver.DriverManager;
+import helpers.PropertiesHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import utils.WebUI;
+
 import java.io.IOException;
 import java.util.Set;
 
-public class LoginPage extends BaseTest {
+public class LoginPage extends CommonPage {
 
 
 //    private By buttonLogin = By.xpath("(//a[normalize-space() = 'Login'])[1]");
@@ -33,6 +34,7 @@ public class LoginPage extends BaseTest {
     private By inputPasswordForEmail = By.xpath("//input[@aria-label = 'Nhập mật khẩu của bạn']");
     private By buttonTiepTheoForPassword = By.xpath("//span[normalize-space() = 'Tiếp theo']");
     private By validEmailInternal = By.xpath("//div[normalize-space() = 'Không tìm thấy Tài khoản Google của bạn']");
+    private By buttonlogin = By.xpath("//div[@class='ant-col right']//a[2]");
 
 
 
@@ -111,8 +113,8 @@ public class LoginPage extends BaseTest {
         WebUI.sleep(5);
     }
 
-    public void loginWithGoogleAccountAdmin(String URL, String email, String password) {
-        WebUI.openURL(URL);
+    public void loginWithGoogleAccountAdmin(String email, String password) {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);
         WebUI.clickElement(loginWithGoogle);
         String MainWindow = DriverManager.getDriver().getWindowHandle();
@@ -131,8 +133,8 @@ public class LoginPage extends BaseTest {
             }
         }
         DriverManager.getDriver().switchTo().window(MainWindow);
-        WebUI.sleep(5);
-        Assert.assertTrue(WebUI.checkElementExist(DashboardPage.registerMiniAppPlan), "Login with google fail");
+        WebUI.sleep(12);
+//        Assert.assertTrue(WebUI.checkElementExist(DashboardPage.registerMiniAppPlan), "Login with google fail");
         WebUI.waitForElementVisible(DashboardPage.accountNganQC);
 
     }
@@ -171,8 +173,9 @@ public class LoginPage extends BaseTest {
         WebUI.checkElementExist(RegisterPage.titleRegister);
     }
 
-    public void loginSuccessFromRegister( String username, String password) throws IOException {
-
+    public void loginSuccessFromRegister( String username, String password) {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
+        WebUI.clickElement(buttonlogin);
         Assert.assertTrue(DriverManager.getDriver().findElement(labelUsernamePhoneEmail).getText().trim().equals("Username/Phone/Email"));
         WebUI.setText(inputUsernamePhoneEmail, username);
         Assert.assertTrue(DriverManager.getDriver().findElement(labelPassword).getText().trim().equals("Password"));
@@ -184,6 +187,42 @@ public class LoginPage extends BaseTest {
         WebUI.clickElement(buttonSubmitLogin);
         WebUI.checkElementExist(DashboardPage.registerMiniAppPlan);
         WebUI.sleep(6);
+    }
+
+    public void loginSuccess(String username, String password){
+        WebUI.clickElement(buttonLogin);
+        Assert.assertTrue(DriverManager.getDriver().findElement(titleLogin).getText().trim().equals("Login"));
+        Assert.assertTrue(DriverManager.getDriver().findElement(labelUsernamePhoneEmail).getText().trim().equals("Username/Phone/Email"));
+        WebUI.setText(inputUsernamePhoneEmail, username);
+        Assert.assertTrue(DriverManager.getDriver().findElement(labelPassword).getText().trim().equals("Password"));
+        WebUI.setText(inputPassword, password);
+        WebUI.clickElement(eyePassword);
+        Assert.assertTrue(DriverManager.getDriver().findElement(inputPassword).getAttribute("type").equals("text"));
+        WebUI.clickElement(eyePassword);
+        Assert.assertTrue(DriverManager.getDriver().findElement(inputPassword).getAttribute("type").equals("password"));
+        WebUI.clickElement(buttonSubmitLogin);
+        WebUI.waitForElementVisible(DashboardPage.menu);
+        WebUI.checkElementExist(DashboardPage.menu);
+        WebUI.checkElementExist(DashboardPage.registerMiniAppPlan);
+        WebUI.sleep(2);
+    }
+
+    public void loginSuccessBeforeAddMiniApp(String username, String password) throws IOException {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
+        WebUI.clickElement(buttonLogin);
+        Assert.assertTrue(DriverManager.getDriver().findElement(titleLogin).getText().trim().equals("Login"));
+        Assert.assertTrue(DriverManager.getDriver().findElement(labelUsernamePhoneEmail).getText().trim().equals("Username/Phone/Email"));
+        WebUI.setText(inputUsernamePhoneEmail, username);
+        Assert.assertTrue(DriverManager.getDriver().findElement(labelPassword).getText().trim().equals("Password"));
+        WebUI.setText(inputPassword, password);
+//        WebUI.clickElement(eyePassword);
+//        Assert.assertTrue(DriverManager.getDriver().findElement(inputPassword).getAttribute("type").equals("text"));
+//        WebUI.clickElement(eyePassword);
+//        Assert.assertTrue(DriverManager.getDriver().findElement(inputPassword).getAttribute("type").equals("password"));
+        WebUI.clickElement(buttonSubmitLogin);
+        WebUI.sleep(15);
+//        WebUI.waitForElementVisible(DashboardPage.menu);
+//        WebUI.sleep(3);
     }
 
 

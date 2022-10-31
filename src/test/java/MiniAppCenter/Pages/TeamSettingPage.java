@@ -23,7 +23,7 @@ public class TeamSettingPage {
         WebUI.setText(inputEmailfield,emailAddedMenber);
         WebUI.clickElement(buttonInviteOnPopup);
         WebUI.waitForElementVisible(notiInformAddSuccess);
-        WebUI.verifyAssertTruIsDisplayed(notiInformAddSuccess, "invite member's failed");
+        WebUI.verifyAssertTrueIsDisplayed(notiInformAddSuccess, "invite member's failed");
         WebUI.waitForElementinVisible(notiInformAddSuccess);
     }
 
@@ -33,7 +33,7 @@ public class TeamSettingPage {
         WebUI.waitForElementVisible(inputEmailfield);
         WebUI.clickElement(buttonInviteOnPopup);
         WebUI.waitForElementinVisible(dataIsRequired);
-        WebUI.verifyAssertTruIsDisplayed(dataIsRequired, "inform error is failed");
+        WebUI.verifyAssertTrueIsDisplayed(dataIsRequired, "inform error is failed");
     }
 
     public void addNewMenberIntoMiniAppWithUserNotCreated(String emailMenber){
@@ -43,12 +43,12 @@ public class TeamSettingPage {
         WebUI.setText(inputEmailfield,emailMenber);
         WebUI.clickElement(buttonInviteOnPopup);
         WebUI.waitForElementVisible(informUserNotFound);
-        WebUI.verifyAssertTruIsDisplayed(informUserNotFound, "invite not created user successfull");
+        WebUI.verifyAssertTrueIsDisplayed(informUserNotFound, "invite not created user successfull");
     }
 
     public void checkMemberWasAddIntoMiniAppPage(){
         WebUI.waitForElementVisible(DashboardPage.menu);
-        WebUI.verifyAssertTruIsDisplayed(DashboardPage.namFolder, "Can't found MiniApp folder");
+        WebUI.verifyAssertTrueIsDisplayed(DashboardPage.namFolder, "Can't found MiniApp folder");
     }
 
     public void deleteExitedUser(String email){

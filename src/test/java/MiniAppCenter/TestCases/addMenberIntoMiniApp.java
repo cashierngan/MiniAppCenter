@@ -27,22 +27,22 @@ public class addMenberIntoMiniApp extends BaseTest {
 
     @Test(priority = 1)
     public void addMenberIntoMiniAppSuccess() throws Exception {
-        excel.setExcelFile("src/test/Resource/Book1.xlsx", "SheetLogin");
-        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 11), excel.getCellData("password", 11));
+        excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
+        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
         dashboardPage.accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         minIAppHomePage.goIntoTeamInfoPage();
-        excel.setExcelFile("src/test/Resource/Book1.xlsx", "SheetAddMenber");
+        excel.setExcelFile("datatest/EditMiniAppMenber.xlsx", "SheetAddMenber");
         teamSettingPage.addNewMenberIntoMiniAppPageSuccessfull(excel.getCellData("username", 1));
         logoutPage.logout();
-        excel.setExcelFile("src/test/Resource/Book1.xlsx", "SheetLogin");
-        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 12), excel.getCellData("password", 12));
+        excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
+        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 15), excel.getCellData("password", 15));
         teamSettingPage.checkMemberWasAddIntoMiniAppPage();
     }
 
     @Test(priority = 2)
     public void addMenberIntoMiniAppFailWithNulldata() throws Exception{
-        excel.setExcelFile("src/test/Resource/Book1.xlsx", "SheetLogin");
-        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 11), excel.getCellData("password", 11));
+        excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
+        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
         dashboardPage.accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         minIAppHomePage.goIntoTeamInfoPage();
         teamSettingPage.addNewMenberIntoMiniAppWithNullData();
@@ -50,11 +50,11 @@ public class addMenberIntoMiniApp extends BaseTest {
 
     @Test(priority = 2)
     public void addMenberIntoMiniAppFailWithNotCreatedUser() throws Exception{
-        excel.setExcelFile("src/test/Resource/Book1.xlsx", "SheetLogin");
-        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 11), excel.getCellData("password", 11));
+        excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
+        loginPage.loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
         dashboardPage.accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         minIAppHomePage.goIntoTeamInfoPage();
-        excel.setExcelFile("src/test/Resource/Book1.xlsx", "SheetAddMenber");
+        excel.setExcelFile("datatest/EditMiniAppMenber.xlsx", "SheetAddMenber");
         teamSettingPage.addNewMenberIntoMiniAppWithUserNotCreated(excel.getCellData("username", 2));
     }
 }
