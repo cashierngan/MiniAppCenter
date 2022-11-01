@@ -48,7 +48,7 @@ public class WebUI {
     }
 
     @Step("Click element: {0}")
-    public static void clickElement( By by, long timeout){
+    public static void clickElement(By by, long timeout){
         waitForPageLoaded();
         waitForElementVisible(by);
         sleep(STEP_TIME);
@@ -85,7 +85,6 @@ public class WebUI {
     }
 
     public static void setValue(By by, String value){
-        waitForPageLoaded();
         JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
         js.executeScript("\"" + by + ".setAttribute('value'," + value + ")");
     }
@@ -111,7 +110,6 @@ public class WebUI {
 
     @Step("Set text {1} on {0}")
     public static void setText( By by, String value){
-        waitForPageLoaded();
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         sleep(STEP_TIME);

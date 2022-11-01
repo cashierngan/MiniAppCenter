@@ -59,7 +59,7 @@ public class BuildMiniAppPage {
         WebUI.verifyAssertTrueIsDisplayed(titleBuildRequest, "Buid request page is NOT displayed");
         WebUI.clickElement(buttonBuildNow);
         WebUI.verifyAssertTrueIsDisplayed(titleBuildDetail, "Buid detail page is NOT displayed");
-        WebUI.sleep(250);
+        WebUI.sleep(150);
         WebUI.verifyAssertTrueIsDisplayed(labelBuildCompleted, "Build is failed");
         WebUI.verifyAssertTrueIsDisplayed(buttonRequestRollout, "Request Rollout is NOT displayed");
     }
