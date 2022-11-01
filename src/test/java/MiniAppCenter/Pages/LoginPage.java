@@ -189,24 +189,6 @@ public class LoginPage extends CommonPage {
         WebUI.sleep(6);
     }
 
-    public void loginSuccess(String username, String password){
-        WebUI.clickElement(buttonLogin);
-        Assert.assertTrue(DriverManager.getDriver().findElement(titleLogin).getText().trim().equals("Login"));
-        Assert.assertTrue(DriverManager.getDriver().findElement(labelUsernamePhoneEmail).getText().trim().equals("Username/Phone/Email"));
-        WebUI.setText(inputUsernamePhoneEmail, username);
-        Assert.assertTrue(DriverManager.getDriver().findElement(labelPassword).getText().trim().equals("Password"));
-        WebUI.setText(inputPassword, password);
-        WebUI.clickElement(eyePassword);
-        Assert.assertTrue(DriverManager.getDriver().findElement(inputPassword).getAttribute("type").equals("text"));
-        WebUI.clickElement(eyePassword);
-        Assert.assertTrue(DriverManager.getDriver().findElement(inputPassword).getAttribute("type").equals("password"));
-        WebUI.clickElement(buttonSubmitLogin);
-        WebUI.waitForElementVisible(DashboardPage.menu);
-        WebUI.checkElementExist(DashboardPage.menu);
-        WebUI.checkElementExist(DashboardPage.registerMiniAppPlan);
-        WebUI.sleep(2);
-    }
-
     public void loginSuccessBeforeAddMiniApp(String username, String password) throws IOException {
         WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);

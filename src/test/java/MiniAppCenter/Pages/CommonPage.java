@@ -1,5 +1,6 @@
 package MiniAppCenter.Pages;
 
+import org.apache.logging.log4j.core.appender.rolling.action.IfAccumulatedFileCount;
 import org.openqa.selenium.By;
 
 public class CommonPage {
@@ -14,6 +15,12 @@ public class CommonPage {
     public AppInfoPage appInfoPage;
     public BuildMiniAppPage buildMiniAppPage;
     public RolloutRequestPage rolloutRequestPage;
+
+    public MinIAppHomePage minIAppHomePage;
+
+    public TeamSettingPage teamSettingPage;
+
+    public DashboardPage dashboardPage;
 
     public static By buttonLogin = By.xpath("(//a[normalize-space() = 'Login'])[1]");
 
@@ -87,6 +94,24 @@ public class CommonPage {
         return rolloutRequestPage;
     }
 
+    public MinIAppHomePage getMinIAppHomePage() {
+        if(minIAppHomePage == null){
+            minIAppHomePage = new MinIAppHomePage();
+        }
+        return minIAppHomePage;
+    }
 
+    public TeamSettingPage getTeamSettingPage() {
+        if (teamSettingPage == null){
+            teamSettingPage = new TeamSettingPage();
+        }
+        return teamSettingPage;
+    }
 
+    public DashboardPage getDashboardPage() {
+        if (dashboardPage == null){
+            dashboardPage = new DashboardPage();
+        }
+        return dashboardPage;
+    }
 }
