@@ -2916,3 +2916,41 @@
 [INFO] 25-10-2022 17:38:42 [main] Log - Verify displayed: By.xpath: //span[normalize-space()='Approved rollout request successfully.']
 [INFO] 25-10-2022 17:38:42 [main] Log - approveRolloutRequestWebApp is passed
 [INFO] 25-10-2022 17:38:44 [main] Log - End TestingSmoke Test flow Add - Approved - Build Mini App
+[INFO] 31-10-2022 15:30:10 [main] Log - Start Testing MiniAppCenter
+[INFO] 31-10-2022 15:30:13 [main] Log - addMenberIntoMiniAppSuccess test is starting...
+[ERROR] 31-10-2022 15:30:14 [main] Log - addMenberIntoMiniAppSuccess is failed
+[ERROR] 31-10-2022 15:30:14 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccess
+[INFO] 31-10-2022 15:30:17 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser test is starting...
+[ERROR] 31-10-2022 15:30:17 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser is failed
+[ERROR] 31-10-2022 15:30:18 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithNotCreatedUser
+[INFO] 31-10-2022 15:30:21 [main] Log - addMenberIntoMiniAppFailWithNulldata test is starting...
+[ERROR] 31-10-2022 15:30:21 [main] Log - addMenberIntoMiniAppFailWithNulldata is failed
+[ERROR] 31-10-2022 15:30:21 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithNulldata
+[INFO] 31-10-2022 15:30:23 [main] Log - End TestingMiniAppCenter
+[INFO] 31-10-2022 15:42:42 [main] Log - Start Testing MiniAppCenter
+[INFO] 31-10-2022 15:42:45 [main] Log - addMiniAppReactNative test is starting...
+[ERROR] 31-10-2022 15:43:16 [main] Log - addMiniAppReactNative is failed
+[ERROR] 31-10-2022 15:43:16 [main] Log - Screenshot captured for test case: addMiniAppReactNative
+[INFO] 31-10-2022 15:43:19 [main] Log - End TestingMiniAppCenter
+[INFO] 31-10-2022 15:52:14 [main] Log - Start Testing MiniAppCenter
+[INFO] 31-10-2022 15:52:17 [main] Log - addMenberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 31-10-2022 15:52:56 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 31-10-2022 15:52:56 [main] Log - addMenberIntoMiniAppFailWithNulldata is passed
+[INFO] 31-10-2022 15:52:58 [main] Log - End TestingMiniAppCenter
+[INFO] 31-10-2022 15:54:03 [main] Log - Start Testing MiniAppCenter
+[INFO] 31-10-2022 15:54:05 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser test is starting...
+[INFO] 31-10-2022 15:54:44 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 31-10-2022 15:54:44 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser is passed
+[INFO] 31-10-2022 15:54:46 [main] Log - End TestingMiniAppCenter
+[INFO] 31-10-2022 15:55:59 [main] Log - Start Testing MiniAppCenter
+[INFO] 31-10-2022 15:56:04 [main] Log - addMenberIntoMiniAppSuccess test is starting...
+[INFO] 31-10-2022 15:56:43 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 31-10-2022 15:57:09 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 31-10-2022 15:57:09 [main] Log - addMenberIntoMiniAppSuccess is passed
+[INFO] 31-10-2022 15:57:13 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser test is starting...
+[INFO] 31-10-2022 15:57:49 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 31-10-2022 15:57:49 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser is passed
+[INFO] 31-10-2022 15:57:52 [main] Log - addMenberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 31-10-2022 15:58:27 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 31-10-2022 15:58:27 [main] Log - addMenberIntoMiniAppFailWithNulldata is passed
+[INFO] 31-10-2022 15:58:29 [main] Log - End TestingMiniAppCenter

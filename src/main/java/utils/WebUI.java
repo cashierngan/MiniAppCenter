@@ -19,6 +19,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class WebUI {
     private static Actions action = new Actions(DriverManager.getDriver());
@@ -89,7 +90,6 @@ public class WebUI {
         js.executeScript("\"" + by + ".setAttribute('value'," + value + ")");
     }
 
-
     public static List<WebElement> getWebElements(By by){
         return DriverManager.getDriver().findElements(by);
     }
@@ -134,7 +134,11 @@ public class WebUI {
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.elementToBeClickable(by));
     }
+    public static void waitForElementinVisible( By by){
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
 
+    }
     @Step("Visibility of element located {0}")
     public static void waitForElementVisible( By by){
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(TIMEOUT));
@@ -158,7 +162,7 @@ public class WebUI {
     public static String getElementText( By by){
         waitForElementVisible(by);
         sleep(STEP_TIME);
-        return getWebElement(by).getText(); // trả về 1 giá trị String
+        return getWebElement(by).getText(); // trả về 1 giá trị  String
     }
     public static void logConsole (Object message){
         System.out.println(message);
