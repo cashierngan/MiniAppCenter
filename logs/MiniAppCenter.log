@@ -2954,3 +2954,104 @@
 [INFO] 31-10-2022 15:58:27 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
 [INFO] 31-10-2022 15:58:27 [main] Log - addMenberIntoMiniAppFailWithNulldata is passed
 [INFO] 31-10-2022 15:58:29 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 10:51:00 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 10:52:10 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 10:52:16 [main] Log - addMenberIntoMiniAppSuccess test is starting...
+[ERROR] 01-11-2022 10:53:12 [main] Log - addMenberIntoMiniAppSuccess is failed
+[ERROR] 01-11-2022 10:53:12 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccess
+[INFO] 01-11-2022 10:53:14 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 10:53:27 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 10:53:30 [main] Log - addMenberIntoMiniAppFailWithNulldata test is starting...
+[ERROR] 01-11-2022 10:53:31 [main] Log - addMenberIntoMiniAppFailWithNulldata is failed
+[ERROR] 01-11-2022 10:53:31 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithNulldata
+[INFO] 01-11-2022 10:53:33 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 10:54:33 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 10:54:36 [main] Log - addMenberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 01-11-2022 10:55:11 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 01-11-2022 10:55:11 [main] Log - addMenberIntoMiniAppFailWithNulldata is passed
+[INFO] 01-11-2022 10:55:14 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 11:59:10 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 11:59:13 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 01-11-2022 12:00:04 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 12:00:04 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 12:00:06 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 12:03:13 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 12:03:15 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 01-11-2022 12:03:47 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 12:03:47 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 12:03:50 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 12:05:28 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 12:05:31 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 01-11-2022 12:06:09 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[ERROR] 01-11-2022 12:06:25 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 12:06:25 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 12:06:27 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 12:08:26 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 12:08:29 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 01-11-2022 12:08:48 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 12:08:48 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 12:08:50 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 12:09:49 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 12:09:51 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 01-11-2022 12:10:32 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[ERROR] 01-11-2022 12:10:46 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 12:10:46 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 12:10:49 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 12:12:02 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 12:12:05 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 01-11-2022 12:12:45 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[ERROR] 01-11-2022 12:12:59 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 12:12:59 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 12:13:02 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 16:22:52 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 16:22:55 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 01-11-2022 16:24:03 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 16:24:03 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 16:24:05 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 16:36:17 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 16:36:19 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 01-11-2022 16:37:11 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 16:37:11 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 16:37:13 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 16:40:07 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 16:40:10 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 01-11-2022 16:40:30 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 01-11-2022 16:40:30 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 01-11-2022 16:40:32 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 16:44:07 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 16:44:10 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 01-11-2022 16:44:54 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 01-11-2022 16:45:21 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 01-11-2022 16:45:21 [main] Log - addMenberIntoMiniAppSuccessWithEmail is passed
+[INFO] 01-11-2022 16:45:23 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 17:05:45 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:05:47 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[ERROR] 01-11-2022 17:06:36 [main] Log - removeMenberFromAMiniAppWithEmail is failed
+[ERROR] 01-11-2022 17:06:36 [main] Log - Screenshot captured for test case: removeMenberFromAMiniAppWithEmail
+[INFO] 01-11-2022 17:06:39 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 17:12:00 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:12:03 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[INFO] 01-11-2022 17:13:02 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:13:05 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[INFO] 01-11-2022 17:13:24 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:13:26 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[INFO] 01-11-2022 17:14:25 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:14:27 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[INFO] 01-11-2022 17:14:33 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 17:15:12 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:15:14 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[INFO] 01-11-2022 17:19:55 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:19:57 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[ERROR] 01-11-2022 17:20:41 [main] Log - removeMenberFromAMiniAppWithEmail is failed
+[ERROR] 01-11-2022 17:20:41 [main] Log - Screenshot captured for test case: removeMenberFromAMiniAppWithEmail
+[INFO] 01-11-2022 17:20:43 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 17:26:47 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:26:51 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[INFO] 01-11-2022 17:27:28 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 01-11-2022 17:27:28 [main] Log - removeMenberFromAMiniAppWithEmail is passed
+[INFO] 01-11-2022 17:27:30 [main] Log - End TestingMiniAppCenter
+[INFO] 01-11-2022 17:31:12 [main] Log - Start Testing MiniAppCenter
+[INFO] 01-11-2022 17:31:15 [main] Log - removeMenberFromAMiniAppWithPhone test is starting...
+[INFO] 01-11-2022 17:31:52 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 01-11-2022 17:31:52 [main] Log - removeMenberFromAMiniAppWithPhone is passed
+[INFO] 01-11-2022 17:31:54 [main] Log - End TestingMiniAppCenter
