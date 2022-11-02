@@ -184,7 +184,7 @@ public class WebUI {
 
 
 
-    public static void waitForElementVisible(By by, int timeOut) {
+    public static void c(By by, int timeOut) {
         try {
             WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(timeOut), Duration.ofMillis(500));
             wait.until(ExpectedConditions.visibilityOfElementLocated(by));

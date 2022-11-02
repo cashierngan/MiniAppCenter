@@ -3055,3 +3055,187 @@
 [INFO] 01-11-2022 17:31:52 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
 [INFO] 01-11-2022 17:31:52 [main] Log - removeMenberFromAMiniAppWithPhone is passed
 [INFO] 01-11-2022 17:31:54 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:08:27 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:08:30 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 14:09:15 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[ERROR] 02-11-2022 14:09:17 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:09:17 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:09:21 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 14:10:03 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[ERROR] 02-11-2022 14:10:05 [main] Log - addMemberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 02-11-2022 14:10:05 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithEmail
+[INFO] 02-11-2022 14:10:08 [main] Log - addMemberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 02-11-2022 14:10:51 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 02-11-2022 14:10:51 [main] Log - addMemberIntoMiniAppFailWithNulldata is passed
+[INFO] 02-11-2022 14:10:54 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser test is starting...
+[INFO] 02-11-2022 14:11:32 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 14:11:32 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser is passed
+[INFO] 02-11-2022 14:11:35 [main] Log - addMemberIntoMiniAppFailWithAddedUser test is starting...
+[INFO] 02-11-2022 14:12:12 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Member is already added.')]
+[INFO] 02-11-2022 14:12:12 [main] Log - addMemberIntoMiniAppFailWithAddedUser is passed
+[INFO] 02-11-2022 14:12:16 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData test is starting...
+[ERROR] 02-11-2022 14:13:01 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData is failed
+[ERROR] 02-11-2022 14:13:01 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppFailWithWrongUserEmailData
+[INFO] 02-11-2022 14:13:04 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneEmailData test is starting...
+[ERROR] 02-11-2022 14:13:58 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneEmailData is failed
+[ERROR] 02-11-2022 14:13:58 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppFailWithWrongPhoneEmailData
+[INFO] 02-11-2022 14:14:02 [main] Log - removeMemberFromAMiniAppWithEmail test is starting...
+[INFO] 02-11-2022 14:14:45 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 02-11-2022 14:14:45 [main] Log - removeMemberFromAMiniAppWithEmail is passed
+[INFO] 02-11-2022 14:14:49 [main] Log - removeMemberFromAMiniAppWithPhone test is starting...
+[INFO] 02-11-2022 14:15:23 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 02-11-2022 14:15:23 [main] Log - removeMemberFromAMiniAppWithPhone is passed
+[INFO] 02-11-2022 14:15:25 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:17:03 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:17:06 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData test is starting...
+[ERROR] 02-11-2022 14:17:53 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData is failed
+[ERROR] 02-11-2022 14:17:53 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppFailWithWrongUserEmailData
+[INFO] 02-11-2022 14:17:55 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:22:38 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:22:41 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 14:23:19 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[ERROR] 02-11-2022 14:23:22 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:23:22 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:23:25 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 14:27:01 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:27:04 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 14:27:47 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:27:47 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:27:49 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:28:06 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:28:09 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 14:28:46 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 14:29:13 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 14:29:13 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is passed
+[INFO] 02-11-2022 14:29:15 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:29:39 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:29:42 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 14:30:13 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:30:13 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:30:17 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 14:31:29 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 14:31:59 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 14:31:59 [main] Log - addMemberIntoMiniAppSuccessWithEmail is passed
+[INFO] 02-11-2022 14:32:02 [main] Log - addMemberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 02-11-2022 14:34:40 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:34:43 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 14:35:29 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 14:35:57 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 14:35:57 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is passed
+[INFO] 02-11-2022 14:36:00 [main] Log - addMemberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 02-11-2022 14:36:41 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 02-11-2022 14:36:41 [main] Log - addMemberIntoMiniAppFailWithNulldata is passed
+[INFO] 02-11-2022 14:36:44 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:37:21 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:37:24 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 14:38:04 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 14:38:31 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 14:38:31 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is passed
+[INFO] 02-11-2022 14:38:35 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 02-11-2022 14:39:03 [main] Log - addMemberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 02-11-2022 14:39:03 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithEmail
+[INFO] 02-11-2022 14:39:07 [main] Log - addMemberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 02-11-2022 14:39:49 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 02-11-2022 14:39:49 [main] Log - addMemberIntoMiniAppFailWithNulldata is passed
+[INFO] 02-11-2022 14:39:52 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser test is starting...
+[INFO] 02-11-2022 14:40:28 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 14:40:28 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser is passed
+[INFO] 02-11-2022 14:40:31 [main] Log - addMemberIntoMiniAppFailWithAddedUser test is starting...
+[INFO] 02-11-2022 14:41:07 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Member is already added.')]
+[INFO] 02-11-2022 14:41:07 [main] Log - addMemberIntoMiniAppFailWithAddedUser is passed
+[INFO] 02-11-2022 14:41:10 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData test is starting...
+[INFO] 02-11-2022 14:41:57 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 14:41:57 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData is passed
+[INFO] 02-11-2022 14:42:00 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneEmailData test is starting...
+[ERROR] 02-11-2022 14:42:46 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneEmailData is failed
+[ERROR] 02-11-2022 14:42:47 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppFailWithWrongPhoneEmailData
+[INFO] 02-11-2022 14:42:50 [main] Log - removeMemberFromAMiniAppWithEmail test is starting...
+[ERROR] 02-11-2022 14:43:33 [main] Log - removeMemberFromAMiniAppWithEmail is failed
+[ERROR] 02-11-2022 14:43:33 [main] Log - Screenshot captured for test case: removeMemberFromAMiniAppWithEmail
+[INFO] 02-11-2022 14:43:37 [main] Log - removeMemberFromAMiniAppWithPhone test is starting...
+[ERROR] 02-11-2022 14:44:10 [main] Log - removeMemberFromAMiniAppWithPhone is failed
+[ERROR] 02-11-2022 14:44:10 [main] Log - Screenshot captured for test case: removeMemberFromAMiniAppWithPhone
+[INFO] 02-11-2022 14:44:12 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:46:20 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:46:23 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 14:47:01 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 14:47:28 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 14:47:28 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is passed
+[INFO] 02-11-2022 14:47:31 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 14:48:32 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 14:48:59 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 14:48:59 [main] Log - addMemberIntoMiniAppSuccessWithEmail is passed
+[INFO] 02-11-2022 14:49:03 [main] Log - addMemberIntoMiniAppFailWithNulldata test is starting...
+[ERROR] 02-11-2022 14:49:35 [main] Log - addMemberIntoMiniAppFailWithNulldata is failed
+[ERROR] 02-11-2022 14:49:35 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppFailWithNulldata
+[INFO] 02-11-2022 14:49:39 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser test is starting...
+[INFO] 02-11-2022 14:50:52 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 14:50:52 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser is passed
+[INFO] 02-11-2022 14:50:55 [main] Log - addMemberIntoMiniAppFailWithAddedUser test is starting...
+[INFO] 02-11-2022 14:52:04 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Member is already added.')]
+[INFO] 02-11-2022 14:52:04 [main] Log - addMemberIntoMiniAppFailWithAddedUser is passed
+[INFO] 02-11-2022 14:52:07 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData test is starting...
+[INFO] 02-11-2022 14:52:46 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 14:52:46 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData is passed
+[INFO] 02-11-2022 14:52:49 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneData test is starting...
+[ERROR] 02-11-2022 14:53:51 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneData is failed
+[ERROR] 02-11-2022 14:53:51 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppFailWithWrongPhoneData
+[INFO] 02-11-2022 14:53:54 [main] Log - removeMemberFromAMiniAppWithPhone test is starting...
+[INFO] 02-11-2022 14:54:29 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 02-11-2022 14:54:29 [main] Log - removeMemberFromAMiniAppWithPhone is passed
+[INFO] 02-11-2022 14:54:32 [main] Log - removeMemberFromAMiniAppWithEmail test is starting...
+[ERROR] 02-11-2022 14:55:04 [main] Log - removeMemberFromAMiniAppWithEmail is failed
+[ERROR] 02-11-2022 14:55:05 [main] Log - Screenshot captured for test case: removeMemberFromAMiniAppWithEmail
+[INFO] 02-11-2022 14:55:07 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 14:56:31 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:56:33 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 14:57:14 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:57:14 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:57:18 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 14:58:23 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:58:26 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 14:59:05 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:59:05 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:59:09 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 14:59:35 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 14:59:37 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 15:00:17 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 15:00:47 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 15:00:47 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is passed
+[INFO] 02-11-2022 15:00:49 [main] Log - End TestingMiniAppCenter
+[INFO] 02-11-2022 15:01:24 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 15:01:26 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 15:02:02 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 15:02:02 [main] Log - Screenshot captured for test case: addMemberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 15:02:06 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 15:02:31 [main] Log - Start Testing MiniAppCenter
+[INFO] 02-11-2022 15:02:33 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 15:03:15 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 15:03:42 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 15:03:42 [main] Log - addMemberIntoMiniAppSuccessWithPhoneNumber is passed
+[INFO] 02-11-2022 15:03:45 [main] Log - addMemberIntoMiniAppSuccessWithEmail test is starting...
+[INFO] 02-11-2022 15:04:23 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Added member successfully')]
+[INFO] 02-11-2022 15:04:50 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Nam Test')]
+[INFO] 02-11-2022 15:04:50 [main] Log - addMemberIntoMiniAppSuccessWithEmail is passed
+[INFO] 02-11-2022 15:04:54 [main] Log - addMemberIntoMiniAppFailWithNulldata test is starting...
+[INFO] 02-11-2022 15:05:30 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Email or phone number is required')]
+[INFO] 02-11-2022 15:05:30 [main] Log - addMemberIntoMiniAppFailWithNulldata is passed
+[INFO] 02-11-2022 15:05:34 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser test is starting...
+[INFO] 02-11-2022 15:06:28 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 15:06:28 [main] Log - addMemberIntoMiniAppFailWithNotCreatedUser is passed
+[INFO] 02-11-2022 15:06:32 [main] Log - addMemberIntoMiniAppFailWithAddedUser test is starting...
+[INFO] 02-11-2022 15:07:07 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Member is already added.')]
+[INFO] 02-11-2022 15:07:07 [main] Log - addMemberIntoMiniAppFailWithAddedUser is passed
+[INFO] 02-11-2022 15:07:11 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData test is starting...
+[INFO] 02-11-2022 15:07:59 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'User information not found')]
+[INFO] 02-11-2022 15:07:59 [main] Log - addMemberIntoMiniAppFailWithWrongUserEmailData is passed
+[INFO] 02-11-2022 15:08:02 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneData test is starting...
+[INFO] 02-11-2022 15:08:39 [main] Log - Verify displayed: By.xpath: //div[contains(text(),'Please input valid email or phone number')]
+[INFO] 02-11-2022 15:08:39 [main] Log - addMemberIntoMiniAppFailWithWrongPhoneData is passed
+[INFO] 02-11-2022 15:08:43 [main] Log - removeMemberFromAMiniAppWithPhone test is starting...
+[INFO] 02-11-2022 15:09:20 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 02-11-2022 15:09:20 [main] Log - removeMemberFromAMiniAppWithPhone is passed
+[INFO] 02-11-2022 15:09:24 [main] Log - removeMemberFromAMiniAppWithEmail test is starting...
+[INFO] 02-11-2022 15:10:15 [main] Log - Verify displayed: By.xpath: //span[contains(text(),'Removed member successfully')]
+[INFO] 02-11-2022 15:10:15 [main] Log - removeMemberFromAMiniAppWithEmail is passed
+[INFO] 02-11-2022 15:10:18 [main] Log - End TestingMiniAppCenter
