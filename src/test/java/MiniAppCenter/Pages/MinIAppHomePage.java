@@ -49,7 +49,7 @@ public class MinIAppHomePage {
     }
 
     public void goIntoTeamInfoPage(){
-        WebUI.waitForElementClickable(settingPacket);
+        WebUI.waitForElementVisible(settingPacket);
         WebUI.clickElement(settingPacket);
         WebUI.clickElement(teamInfo);
     }
