@@ -3784,3 +3784,46 @@
 [ERROR] 01-11-2022 11:49:16 [main] Log - Screenshot captured for test case: buildMiniappReactNative
 [INFO] 01-11-2022 11:49:25 [main] Log - rolloutRequestWebApp test is starting...
 >>>>>>> 45eb65a2 (Update link redirect after report)
+[INFO] 02-11-2022 12:36:22 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 12:36:35 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 02-11-2022 12:37:26 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 02-11-2022 12:37:26 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 02-11-2022 12:37:34 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 12:38:14 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 12:38:14 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 12:38:21 [main] Log - addMenberIntoMiniAppFailWithNulldata test is starting...
+[ERROR] 02-11-2022 12:39:10 [main] Log - addMenberIntoMiniAppFailWithNulldata is failed
+[ERROR] 02-11-2022 12:39:11 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithNulldata
+[INFO] 02-11-2022 12:39:19 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser test is starting...
+[ERROR] 02-11-2022 12:39:59 [main] Log - addMenberIntoMiniAppFailWithNotCreatedUser is failed
+[ERROR] 02-11-2022 12:40:00 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithNotCreatedUser
+[INFO] 02-11-2022 12:40:07 [main] Log - addMenberIntoMiniAppFailWithAddedUser test is starting...
+[ERROR] 02-11-2022 12:40:47 [main] Log - addMenberIntoMiniAppFailWithAddedUser is failed
+[ERROR] 02-11-2022 12:40:47 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithAddedUser
+[INFO] 02-11-2022 12:40:54 [main] Log - addMenberIntoMiniAppFailWithWrongUserEmailData test is starting...
+[ERROR] 02-11-2022 12:41:38 [main] Log - addMenberIntoMiniAppFailWithWrongUserEmailData is failed
+[ERROR] 02-11-2022 12:41:38 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithWrongUserEmailData
+[INFO] 02-11-2022 12:41:47 [main] Log - addMenberIntoMiniAppFailWithWrongPhoneEmailData test is starting...
+[ERROR] 02-11-2022 12:42:24 [main] Log - addMenberIntoMiniAppFailWithWrongPhoneEmailData is failed
+[ERROR] 02-11-2022 12:42:25 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppFailWithWrongPhoneEmailData
+[INFO] 02-11-2022 12:42:33 [main] Log - removeMenberFromAMiniAppWithEmail test is starting...
+[ERROR] 02-11-2022 12:43:12 [main] Log - removeMenberFromAMiniAppWithEmail is failed
+[ERROR] 02-11-2022 12:43:12 [main] Log - Screenshot captured for test case: removeMenberFromAMiniAppWithEmail
+[INFO] 02-11-2022 12:43:19 [main] Log - removeMenberFromAMiniAppWithPhone test is starting...
+[ERROR] 02-11-2022 12:44:00 [main] Log - removeMenberFromAMiniAppWithPhone is failed
+[ERROR] 02-11-2022 12:44:01 [main] Log - Screenshot captured for test case: removeMenberFromAMiniAppWithPhone
+[INFO] 02-11-2022 12:44:03 [main] Log - End Testingmini-app-center
+[INFO] 02-11-2022 13:17:39 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 13:17:51 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 02-11-2022 13:18:33 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 02-11-2022 13:18:36 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 02-11-2022 13:19:59 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 13:20:08 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 02-11-2022 13:21:00 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 02-11-2022 13:21:04 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 02-11-2022 13:21:12 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[INFO] 02-11-2022 13:26:29 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 13:26:40 [main] Log - addMenberIntoMiniAppSuccessWithEmail test is starting...
+[ERROR] 02-11-2022 13:27:25 [main] Log - addMenberIntoMiniAppSuccessWithEmail is failed
+[ERROR] 02-11-2022 13:27:27 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithEmail
+[INFO] 02-11-2022 13:27:30 [main] Log - End Testingmini-app-center
