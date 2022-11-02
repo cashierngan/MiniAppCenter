@@ -3839,3 +3839,15 @@
 [ERROR] 02-11-2022 14:26:47 [main] Log - configAppInfo is failed
 [ERROR] 02-11-2022 14:26:47 [main] Log - Screenshot captured for test case: configAppInfo
 [INFO] 02-11-2022 14:26:50 [main] Log - End Testingmini-app-center
+[INFO] 02-11-2022 14:52:06 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 14:52:16 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 14:53:20 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:53:20 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:53:23 [main] Log - End Testingmini-app-center
+[INFO] 02-11-2022 14:54:46 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 14:54:56 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber test is starting...
+[ERROR] 02-11-2022 14:56:24 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber is failed
+[ERROR] 02-11-2022 14:56:25 [main] Log - Screenshot captured for test case: addMenberIntoMiniAppSuccessWithPhoneNumber
+[INFO] 02-11-2022 14:56:27 [main] Log - End Testingmini-app-center
+[INFO] 02-11-2022 14:57:23 [main] Log - Start Testing mini-app-center
+[INFO] 02-11-2022 14:57:34 [main] Log - addMenberIntoMiniAppSuccessWithPhoneNumber test is starting...
