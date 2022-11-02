@@ -4,20 +4,13 @@
   <test thread-count="5" name="Smoke Test flow Add - Approved - Build Mini App(failed)" verbose="0">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="MiniAppCenter.TestCases.AddMiniAppTest">
+      <class name="MiniAppCenter.TestCases.BuildMiniAppTest">
         <methods>
-          <include name="addMiniAppReactNative"/>
           <include name="closeDriver"/>
           <include name="createDriver"/>
+          <include name="buildMiniappReactNative"/>
         </methods>
-      </class> <!-- MiniAppCenter.TestCases.AddMiniAppTest -->
-      <class name="MiniAppCenter.TestCases.RegisterMiniAppTest">
-        <methods>
-          <include name="authorizationForBussinessAccount"/>
-          <include name="closeDriver"/>
-          <include name="createDriver"/>
-        </methods>
-      </class> <!-- MiniAppCenter.TestCases.RegisterMiniAppTest -->
+      </class> <!-- MiniAppCenter.TestCases.BuildMiniAppTest -->
       <class name="MiniAppCenter.TestCases.ApprovalMiniAppTest">
         <methods>
           <include name="ApprovalMiniApp"/>
@@ -25,6 +18,21 @@
           <include name="createDriver"/>
         </methods>
       </class> <!-- MiniAppCenter.TestCases.ApprovalMiniAppTest -->
+      <class name="MiniAppCenter.TestCases.RolloutRequestTest">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="createDriver"/>
+          <include name="rolloutRequestWebApp"/>
+          <include name="approveRolloutRequestWebApp"/>
+        </methods>
+      </class> <!-- MiniAppCenter.TestCases.RolloutRequestTest -->
+      <class name="MiniAppCenter.TestCases.RegisterMiniAppTest">
+        <methods>
+          <include name="authorizationForBussinessAccount"/>
+          <include name="closeDriver"/>
+          <include name="createDriver"/>
+        </methods>
+      </class> <!-- MiniAppCenter.TestCases.RegisterMiniAppTest -->
       <class name="MiniAppCenter.TestCases.AppInfoTest">
         <methods>
           <include name="closeDriver"/>
@@ -32,6 +40,13 @@
           <include name="configAppInfo"/>
         </methods>
       </class> <!-- MiniAppCenter.TestCases.AppInfoTest -->
+      <class name="MiniAppCenter.TestCases.AddMiniAppTest">
+        <methods>
+          <include name="addMiniAppReactNative"/>
+          <include name="closeDriver"/>
+          <include name="createDriver"/>
+        </methods>
+      </class> <!-- MiniAppCenter.TestCases.AddMiniAppTest -->
     </classes>
   </test> <!-- Smoke Test flow Add - Approved - Build Mini App(failed) -->
 </suite> <!-- Failed suite [Suite] -->

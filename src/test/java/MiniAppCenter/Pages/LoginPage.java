@@ -38,8 +38,8 @@ public class LoginPage extends CommonPage {
 
 
 
-    public void loginFailWithNullData( String URL) throws IOException {
-        WebUI.openURL(URL);
+    public void loginFailWithNullData() throws IOException {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(CommonPage.buttonLogin);
         Assert.assertTrue(DriverManager.getDriver().findElement(titleLogin).getText().trim().equals("Login"));
         WebUI.clickElement(buttonSubmitLogin);
@@ -51,8 +51,8 @@ public class LoginPage extends CommonPage {
 
     }
 
-    public void loginFailWithAccountFail(String URL, String username, String password) throws IOException {
-        WebUI.openURL(URL);
+    public void loginFailWithAccountFail(String username, String password) throws IOException {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);
         Assert.assertTrue(DriverManager.getDriver().findElement(titleLogin).getText().trim().equals("Login"));
         Assert.assertTrue(DriverManager.getDriver().findElement(labelUsernamePhoneEmail).getText().trim().equals("Username/Phone/Email"));
@@ -69,8 +69,8 @@ public class LoginPage extends CommonPage {
         Assert.assertTrue(DriverManager.getDriver().findElement(messageAccountIncorrect).getText().trim().equals("User name/Email/Phone Number or Password is incorrect"));
     }
 
-    public void loginSuccess(String URL, String username, String password) throws IOException {
-        WebUI.openURL(URL);
+    public void loginSuccess(String username, String password) throws IOException {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);
         Assert.assertTrue(DriverManager.getDriver().findElement(titleLogin).getText().trim().equals("Login"));
         Assert.assertTrue(DriverManager.getDriver().findElement(labelUsernamePhoneEmail).getText().trim().equals("Username/Phone/Email"));
@@ -88,8 +88,8 @@ public class LoginPage extends CommonPage {
         WebUI.sleep(2);
     }
 
-    public void loginSuccessWithGoogle(String URL, String email, String password) {
-        WebUI.openURL(URL);
+    public void loginSuccessWithGoogle(String email, String password) {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);
         WebUI.clickElement(loginWithGoogle);
         String MainWindow = DriverManager.getDriver().getWindowHandle();
@@ -139,8 +139,8 @@ public class LoginPage extends CommonPage {
 
     }
 
-    public void loginFailWithGoogle(String URL, String email) {
-        WebUI.openURL(URL);
+    public void loginFailWithGoogle(String email) {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);
         WebUI.clickElement(loginWithGoogle);
         String MainWindow = DriverManager.getDriver().getWindowHandle();
@@ -162,8 +162,8 @@ public class LoginPage extends CommonPage {
 
 
 
-    public void validationText(String URL) throws IOException {
-        WebUI.openURL(URL);
+    public void validationText() throws IOException {
+        WebUI.openURL(PropertiesHelper.getValue("url"));
         WebUI.clickElement(buttonLogin);
         Assert.assertTrue(DriverManager.getDriver().findElement(labelLoginWithMoMo).getText().trim().equals("Login with MoMo account for Business"));
         Assert.assertTrue(DriverManager.getDriver().findElement(labelOrLoginBy).getText().trim().equals("Or login by"));

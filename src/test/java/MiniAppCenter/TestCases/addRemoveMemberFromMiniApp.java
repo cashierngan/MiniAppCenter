@@ -11,35 +11,35 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 1)
     public void addMemberIntoMiniAppSuccessWithPhoneNumber() throws Exception {
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
         getTeamSettingPage().addNewMemberIntoMiniAppPageSuccessfull(excel.getCellData("username", 1));
         getLogoutPage().logout();
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 15), excel.getCellData("password", 15));
+        getLoginPage().loginSuccess(excel.getCellData("username", 15), excel.getCellData("password", 15));
         getTeamSettingPage().checkMemberWasAddIntoMiniAppPage();
     }
 
     @Test(priority = 2)
     public void addMemberIntoMiniAppSuccessWithEmail() throws Exception {
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
         getTeamSettingPage().addNewMemberIntoMiniAppPageSuccessfull(excel.getCellData("username", 3));
         getLogoutPage().logout();
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 16), excel.getCellData("password", 16));
+        getLoginPage().loginSuccess(excel.getCellData("username", 16), excel.getCellData("password", 16));
         getTeamSettingPage().checkMemberWasAddIntoMiniAppPage();
     }
 
     @Test(priority = 3)
     public void addMemberIntoMiniAppFailWithNulldata() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().addNewMemberIntoMiniAppWithNullData();
@@ -48,7 +48,7 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 4)
     public void addMemberIntoMiniAppFailWithNotCreatedUser() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
@@ -58,7 +58,7 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 5)
     public void addMemberIntoMiniAppFailWithAddedUser() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
@@ -68,7 +68,7 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 6)
     public void addMemberIntoMiniAppFailWithWrongUserEmailData() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
@@ -78,7 +78,7 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 7)
     public void addMemberIntoMiniAppFailWithWrongPhoneData() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
@@ -88,7 +88,7 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 9)
     public void removeMemberFromAMiniAppWithEmail() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
@@ -98,7 +98,7 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     @Test(priority = 8)
     public void removeMemberFromAMiniAppWithPhone() throws Exception{
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
-        getLoginPage().loginSuccess(PropertiesHelper.getValue("url"), excel.getCellData("username", 14), excel.getCellData("password", 14));
+        getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(dashboardPage.namFolder, dashboardPage.miniAppCatogery, dashboardPage.viewButton);
         getMinIAppHomePage().goIntoTeamInfoPage();
         excel.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");

@@ -1,22 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 655.026 s <<< FAILURE! - in TestSuite
-MiniAppCenter.TestCases.RegisterMiniAppTest.authorizationForBussinessAccount  Time elapsed: 45.399 s  <<< FAILURE!
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 468.905 s <<< FAILURE! - in TestSuite
+MiniAppCenter.TestCases.RegisterMiniAppTest.authorizationForBussinessAccount  Time elapsed: 53.461 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: 
 Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='userName___1zGMg anticon' and normalize-space() = 'Đặng Thị Thu Ngân - ITC - APP - Senior Tester'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.5.0', revision: 'fe167b119a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '19'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62473}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62473/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c6a5298745489aa33183cfa5cce9d58b
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:51277}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51277/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f96d7b5f7e38c28bdfb388eba9b5494d
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at utils.WebUI.waitForElementVisible(WebUI.java:141)
+	at utils.WebUI.waitForElementVisible(WebUI.java:139)
 	at MiniAppCenter.Pages.LoginPage.loginWithGoogleAccountAdmin(LoginPage.java:138)
 	at MiniAppCenter.TestCases.RegisterMiniAppTest.authorizationForBussinessAccount(RegisterMiniAppTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -46,21 +46,34 @@ Session ID: c6a5298745489aa33183cfa5cce9d58b
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-MiniAppCenter.TestCases.AddMiniAppTest.addMiniAppReactNative  Time elapsed: 61.35 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for visibility of element located by By.xpath: //button[normalize-space()='Add Mini App'] (tried for 10 second(s) with 500 milliseconds interval)
+MiniAppCenter.TestCases.AddMiniAppTest.addMiniAppReactNative  Time elapsed: 66.798 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span style="border: 3px solid red;">...</span> is not clickable at point (372, 279). Other element would receive the click: <button data-inspector-line="50" data-inspector-column="10" data-inspector-relative-path="src/pages/Home/index.jsx" disabled="" type="button" class="ant-btn ant-btn-primary button___h63Gp">...</button>
+  (Session info: chrome=107.0.5304.87)
 Build info: version: '4.5.0', revision: 'fe167b119a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '19'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62526}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62526/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a7738c0848ea1c2a97f6b05f18d46f0e
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at utils.WebUI.verifyAssertTrueIsDisplayed(WebUI.java:81)
-	at MiniAppCenter.Pages.AddMiniAppsPage.addMiniAppReactNativeSuccess(AddMiniAppsPage.java:40)
-	at MiniAppCenter.TestCases.AddMiniAppTest.addMiniAppReactNative(AddMiniAppTest.java:21)
+Command: [320b9f64290f00c776b10a3fe0fdfea4, clickElement {id=0a265d22-2feb-4d9b-b2e3-5a6eafff0f2d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:51571}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51571/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (320b9f64290f00c776b10a3fe0fdfea4)] -> xpath: //span[normalize-space()='Register Mini App Plan']]
+Session ID: 320b9f64290f00c776b10a3fe0fdfea4
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at utils.WebUI.clickElement(WebUI.java:45)
+	at MiniAppCenter.Pages.RegisterMiniAppPage.registerMiniAppPlanSuccessReactNative(RegisterMiniAppPage.java:46)
+	at MiniAppCenter.TestCases.AddMiniAppTest.addMiniAppReactNative(AddMiniAppTest.java:19)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -90,21 +103,21 @@ Session ID: a7738c0848ea1c2a97f6b05f18d46f0e
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-MiniAppCenter.TestCases.ApprovalMiniAppTest.ApprovalMiniApp  Time elapsed: 46.405 s  <<< FAILURE!
+MiniAppCenter.TestCases.ApprovalMiniAppTest.ApprovalMiniApp  Time elapsed: 47.811 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: 
 Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class='userName___1zGMg anticon' and normalize-space() = 'Đặng Thị Thu Ngân - ITC - APP - Senior Tester'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.5.0', revision: 'fe167b119a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '19'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62581}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62581/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 354e5e0bfd8911b16d34272ececbf9e4
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:51888}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51888/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 55ef146ed441915ccd1242653b1535a7
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at utils.WebUI.waitForElementVisible(WebUI.java:141)
+	at utils.WebUI.waitForElementVisible(WebUI.java:139)
 	at MiniAppCenter.Pages.LoginPage.loginWithGoogleAccountAdmin(LoginPage.java:138)
 	at MiniAppCenter.TestCases.ApprovalMiniAppTest.ApprovalMiniApp(ApprovalMiniAppTest.java:17)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -134,21 +147,171 @@ Session ID: 354e5e0bfd8911b16d34272ececbf9e4
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-MiniAppCenter.TestCases.AppInfoTest.configAppInfo  Time elapsed: 42.029 s  <<< FAILURE!
+MiniAppCenter.TestCases.AppInfoTest.configAppInfo  Time elapsed: 79.826 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for visibility of element located by By.xpath: //span[normalize-space()='View'] (tried for 10 second(s) with 500 milliseconds interval)
+Expected condition failed: waiting for visibility of element located by By.xpath: //span[normalize-space()='Ngăn Ngăn Shop'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.5.0', revision: 'fe167b119a'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '19'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:62638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62638/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f49646ec414e3a8135fa5113fc8654d9
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:52142}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52142/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0a158937fd0365f24460061d348805cf
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at utils.WebUI.clickElement(WebUI.java:42)
-	at MiniAppCenter.Pages.AddMiniAppsPage.searchAndViewMiniApp(AddMiniAppsPage.java:116)
+	at MiniAppCenter.Pages.RegisterMiniAppPage.viewMiniAppList(RegisterMiniAppPage.java:39)
+	at MiniAppCenter.Pages.AddMiniAppsPage.searchAndViewMiniApp(AddMiniAppsPage.java:110)
 	at MiniAppCenter.TestCases.AppInfoTest.configAppInfo(AppInfoTest.java:17)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+
+MiniAppCenter.TestCases.BuildMiniAppTest.buildMiniappReactNative  Time elapsed: 46.305 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Search Mini App']"}
+  (Session info: chrome=107.0.5304.87)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [60dceaa73177b0911246bbcc09592f49, findElement {using=xpath, value=//input[@placeholder='Search Mini App']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:52537}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52537/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 60dceaa73177b0911246bbcc09592f49
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at utils.WebUI.getWebElement(WebUI.java:59)
+	at utils.WebUI.highLightElement(WebUI.java:468)
+	at utils.WebUI.setTextEnter(WebUI.java:127)
+	at MiniAppCenter.Pages.BuildMiniAppPage.viewMiniApp(BuildMiniAppPage.java:41)
+	at MiniAppCenter.TestCases.BuildMiniAppTest.buildMiniappReactNative(BuildMiniAppTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+
+MiniAppCenter.TestCases.RolloutRequestTest.rolloutRequestWebApp  Time elapsed: 69.689 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='title___49HqJ'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:52771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52771/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5770fdf4ad9230aee6f3c7e098d0c7a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.WebUI.verifyAssertTrueEqual(WebUI.java:65)
+	at MiniAppCenter.Pages.BuildMiniAppPage.viewMiniApp(BuildMiniAppPage.java:39)
+	at MiniAppCenter.TestCases.RolloutRequestTest.rolloutRequestWebApp(RolloutRequestTest.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+
+MiniAppCenter.TestCases.RolloutRequestTest.approveRolloutRequestWebApp  Time elapsed: 52 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='rcDialogTitle0'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5.1', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/57/zjxg7xzj2gd...}, goog:chromeOptions: {debuggerAddress: localhost:53114}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53114/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d3555d1350450060d370aca9b022fdee
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.WebUI.verifyAssertTrueIsDisplayed(WebUI.java:81)
+	at MiniAppCenter.Pages.RolloutRequestPage.approveRolloutRequestWebApp(RolloutRequestPage.java:76)
+	at MiniAppCenter.TestCases.RolloutRequestTest.approveRolloutRequestWebApp(RolloutRequestTest.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
