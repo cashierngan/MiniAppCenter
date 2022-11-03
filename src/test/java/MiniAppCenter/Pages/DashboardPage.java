@@ -14,8 +14,6 @@ public class DashboardPage extends CommonPage{
 
     public static By menuSystemManagement = By.xpath("//span[normalize-space()='System Management']");
 
-    public static By namFolder = By.xpath("//span[contains(text(),'Nam Test')]");
-
     public static By menuMiniAppManagement = By.xpath("//span[normalize-space()='Mini App Management']");
     public static By menuBuild = By.xpath("//span[@class='ant-menu-title-content'][normalize-space()='Build']");
     public static By menuSettings = By.xpath("//span[normalize-space() = 'Settings']");
@@ -26,7 +24,7 @@ public class DashboardPage extends CommonPage{
 
     public void  accessIntoAMiniApp (String folder) {
         WebUI.clickElement(By.xpath("//span[contains(text(),'" + folder + "')]"));
-);
+        WebUI.waitForElementVisible(miniAppCatogery);
         WebUI.clickElement(miniAppCatogery);
         WebUI.waitForElementVisible(viewButton);
         WebUI.clickElement(viewButton);
