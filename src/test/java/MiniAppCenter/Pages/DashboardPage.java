@@ -24,8 +24,9 @@ public class DashboardPage extends CommonPage{
 
     public static By viewButton = By.xpath("//span[contains(text(),'View')]");
 
-    public void  accessIntoAMiniApp (By miniAppPlanFolder, By miniAppCatogery, By viewButton) {
-        WebUI.clickElement(miniAppPlanFolder);
+    public void  accessIntoAMiniApp (String folder) {
+        WebUI.clickElement(By.xpath("//span[contains(text(),'" + folder + "')]"));
+);
         WebUI.clickElement(miniAppCatogery);
         WebUI.waitForElementVisible(viewButton);
         WebUI.clickElement(viewButton);
