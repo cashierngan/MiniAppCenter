@@ -10,6 +10,7 @@
             <class name="MiniAppCenter.TestCases.AppInfoTest" />
             <class name="MiniAppCenter.TestCases.BuildMiniAppTest" />
             <class name="MiniAppCenter.TestCases.RolloutRequestTest" />
+            <class name="MiniAppCenter.TestCases.addRemoveMemberFromMiniApp" />
         </classes>
     </test>
 </suite>
