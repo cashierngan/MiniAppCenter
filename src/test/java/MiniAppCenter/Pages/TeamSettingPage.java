@@ -35,8 +35,8 @@ public class TeamSettingPage {
         WebUI.verifyAssertTrueIsDisplayed(NotiInform, "invite user successfull");
     }
 
-    public void checkMemberWasAddIntoMiniAppPage(){
-        WebUI.verifyAssertTrueIsDisplayed(DashboardPage.namFolder, "Can't found MiniApp folder");
+    public void checkMemberWasAddIntoMiniAppPage(String folder){
+        WebUI.verifyAssertTrueIsDisplayed(By.xpath("//span[contains(text(),'" + folder + "')]"), "Can't found MiniApp folder");
     }
 
     public void deleteExitedUser(String email){

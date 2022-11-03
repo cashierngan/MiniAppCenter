@@ -14,8 +14,6 @@ public class DashboardPage extends CommonPage{
 
     public static By menuSystemManagement = By.xpath("//span[normalize-space()='System Management']");
 
-    public static By namFolder = By.xpath("//span[contains(text(),'Nam Test')]");
-
     public static By menuMiniAppManagement = By.xpath("//span[normalize-space()='Mini App Management']");
     public static By menuBuild = By.xpath("//span[@class='ant-menu-title-content'][normalize-space()='Build']");
     public static By menuSettings = By.xpath("//span[normalize-space() = 'Settings']");
