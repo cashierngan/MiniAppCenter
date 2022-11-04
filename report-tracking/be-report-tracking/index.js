@@ -83,18 +83,15 @@ app.get("/run", (req, res) => {
       isRunning = false;
       if (!error) {
         const response = await axios('http://localhost:4000/list-reports');
-        const reports = await response.json();
-        if(reports?.data?.data?.length > 0) {
+        const reports = response.data;
+        if(reports?.data?.length > 0) {
           const notificationUrl = 'https://chat.googleapis.com/v1/spaces/AAAAU5PDKN4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=7BcR6z4qA--YMx8GIgPu7OlfWMzIMq6zJsC-sCrcnew%3D&threadKey=23232326';
-          const lastestTest = reports.data.data[0]
+          const lastestTest = reports.data[0]
           const testView = `https://mac-testing.web.app/${lastestTest.id}`
           const message = JSON.stringify({
             text:
-              `${'```'}
-                Request Test Completed
-                \n----------------------------------------\n
-              ${'```'}` + 
-              `\n<${testView} | Click here to view result>`
+              `${'```'}Request Test Completed${'```'}` + 
+              `${testView} | Click here to view result`
           });
           try {
             fetch(notificationUrl, {
