@@ -10,6 +10,7 @@ const axios = require("axios");
 const hostname = "localhost";
 const port = 4000;
 const app = express();
+const axios = require('axios');
 
 let isRunning = false;
 
@@ -78,18 +79,28 @@ app.get("/run", (req, res) => {
   isRunning = true;
   exec(
     "cd /Users/ngan.dang/Testing/mini-app-center && mvn test --file /Users/ngan.dang/Testing/mini-app-center/pom.xml",
-    function (error, stdout, stderr) {
+    async function (error, stdout, stderr) {
       isRunning = false;
       if (!error) {
+        const response = await axios('http://localhost:4000/list-reports');
+        const reports = await response.json();
+        if(reports?.data?.data?.length > 0) {
+          const lastestTest = reports.data.data[0]
+          res.redirect(`https://mac-testing.web.app/${lastestTest.id}`);
+        }
         res.redirect("https://mac-testing.web.app");
       } else {
         res.json({
-          status: "failed",
+          status: "Failed",
           error: stdout,
         });
       }
     }
   );
+  res.json({
+    status: "Success",
+    message: "Request run automation test success"
+  });
 });
 app.get("/list-reports", function (req, res) {
   const pageSize = Number(req?.query?.pageSize) || 10;
