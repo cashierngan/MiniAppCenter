@@ -10,7 +10,6 @@ const axios = require("axios");
 const hostname = "localhost";
 const port = 4000;
 const app = express();
-const axios = require('axios');
 
 let isRunning = false;
 
