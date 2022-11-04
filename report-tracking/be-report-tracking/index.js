@@ -10,6 +10,7 @@ const axios = require("axios");
 const hostname = "localhost";
 const port = 4000;
 const app = express();
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 let isRunning = false;
 
@@ -84,10 +85,35 @@ app.get("/run", (req, res) => {
         const response = await axios('http://localhost:4000/list-reports');
         const reports = await response.json();
         if(reports?.data?.data?.length > 0) {
+          const notificationUrl = 'https://chat.googleapis.com/v1/spaces/AAAAU5PDKN4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=7BcR6z4qA--YMx8GIgPu7OlfWMzIMq6zJsC-sCrcnew%3D&threadKey=23232326';
           const lastestTest = reports.data.data[0]
-          res.redirect(`https://mac-testing.web.app/${lastestTest.id}`);
+          const testView = `https://mac-testing.web.app/${lastestTest.id}`
+          const message = JSON.stringify({
+            text:
+              `${'```'}
+                Request Test Completed
+                \n----------------------------------------\n
+              ${'```'}` + 
+              `\n<${testView} | Click here to view result>`
+          });
+          try {
+            fetch(notificationUrl, {
+              method: 'post',
+              headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+              },
+              body: message,
+            });
+            res.json({
+              status: 'Success',
+              message: 'Send report success'
+            });
+          } catch (error) {
+            console.log(error)
+            return res.status(500).json(error.response)
+          }
         }
-        res.redirect("https://mac-testing.web.app");
       } else {
         res.json({
           status: "Failed",
