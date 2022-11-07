@@ -91,7 +91,7 @@ app.get("/run", (req, res) => {
           const message = JSON.stringify({
             text:
               `${'```'}Request Test Completed${'```'}` + 
-              `${testView} | Click here to view result`
+              `View result: ${testView}`
           });
           try {
             fetch(notificationUrl, {
@@ -124,6 +124,7 @@ app.get("/run", (req, res) => {
     message: "Request run automation test success"
   });
 });
+
 app.get("/list-reports", function (req, res) {
   const pageSize = Number(req?.query?.pageSize) || 10;
   const pageIndex = Number(req?.query?.pageIndex) || 1;
