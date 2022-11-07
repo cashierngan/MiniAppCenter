@@ -10,6 +10,12 @@
             <class name="MiniAppCenter.TestCases.AppInfoTest" />
             <class name="MiniAppCenter.TestCases.BuildMiniAppTest" />
             <class name="MiniAppCenter.TestCases.RolloutRequestTest" />
+        </classes>
+    </test>
+
+    <test name="Add and Remove user from Mini App">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
             <class name="MiniAppCenter.TestCases.addRemoveMemberFromMiniApp" />
         </classes>
     </test>

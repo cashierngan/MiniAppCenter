@@ -28,11 +28,11 @@ public class TeamSettingPage {
         WebUI.verifyAssertTrueIsDisplayed(dataIsRequired, "inform error is failed");
     }
 
-    public void addNewMemberIntoMiniAppWithIncorrectData(String emailMember, By NotiInform){
+    public void addNewMemberIntoMiniAppWithIncorrectData(String emailMember){
         WebUI.clickElement(inviteMemberButton);
         WebUI.setText(inputEmailfield,emailMember);
         WebUI.clickElement(buttonInviteOnPopup);
-        WebUI.verifyAssertTrueIsDisplayed(NotiInform, "invite user successfull");
+        WebUI.verifyAssertTrueIsDisplayed(informUserNotFound, "invite user successfull");
     }
 
     public void checkMemberWasAddIntoMiniAppPage(String folder){
