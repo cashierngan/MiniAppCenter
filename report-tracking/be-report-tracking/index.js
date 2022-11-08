@@ -79,38 +79,40 @@ app.get("/run", (req, res) => {
   isRunning = true;
   exec(
     "cd /Users/ngan.dang/Testing/mini-app-center && mvn test --file /Users/ngan.dang/Testing/mini-app-center/pom.xml",
-    async function (error, stdout, stderr) {
+    function (error, stdout, stderr) {
       isRunning = false;
       if (!error) {
-        const response = await axios('http://localhost:4000/list-reports');
-        const reports = response.data;
-        if(reports?.data?.length > 0) {
-          const notificationUrl = 'https://chat.googleapis.com/v1/spaces/AAAAU5PDKN4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=7BcR6z4qA--YMx8GIgPu7OlfWMzIMq6zJsC-sCrcnew%3D&threadKey=23232326';
-          const lastestTest = reports.data[0]
-          const testView = `https://mac-testing.web.app/${lastestTest.id}`
-          const message = JSON.stringify({
-            text:
-              `${'```'}Request Test Completed${'```'}` + 
-              `View result: ${testView}`
-          });
-          try {
-            fetch(notificationUrl, {
-              method: 'post',
-              headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-              },
-              body: message,
+        setTimeout(async () => {
+          const response = await axios('http://localhost:4000/list-reports');
+          const reports = response.data;
+          if(reports?.data?.length > 0) {
+            const notificationUrl = 'https://chat.googleapis.com/v1/spaces/AAAAU5PDKN4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=7BcR6z4qA--YMx8GIgPu7OlfWMzIMq6zJsC-sCrcnew%3D&threadKey=23232326';
+            const lastestTest = reports.data[0]
+            const testView = `https://mac-testing.web.app/${lastestTest.id}`
+            const message = JSON.stringify({
+              text:
+                `${'```'}Request Test Completed${'```'}` + 
+                `View result: ${testView}`
             });
-            res.json({
-              status: 'Success',
-              message: 'Send report success'
-            });
-          } catch (error) {
-            console.log(error)
-            return res.status(500).json(error.response)
+            try {
+              fetch(notificationUrl, {
+                method: 'post',
+                headers: {
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                },
+                body: message,
+              });
+              res.json({
+                status: 'Success',
+                message: 'Send report success'
+              });
+            } catch (error) {
+              console.log(error)
+              return res.status(500).json(error.response)
+            }
           }
-        }
+        }, 1000 * 60 * 2);
       } else {
         res.json({
           status: "Failed",
