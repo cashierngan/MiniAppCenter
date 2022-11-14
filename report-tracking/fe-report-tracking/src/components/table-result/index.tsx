@@ -2,10 +2,10 @@ import { Table, Tag } from "antd";
 import type {
   ColumnsType,
   TablePaginationConfig,
-  TableProps,
+  TableProps
 } from "antd/es/table";
-import { Link } from 'react-router-dom'
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import { useListReports } from "../../hooks";
 import styles from "./table-result.module.scss";
 
@@ -27,7 +27,7 @@ interface TableParams {
   pagination?: TablePaginationConfig;
 }
 
-interface ListReportsProps {
+export interface ListReportsProps {
   dataReports?: {
     data?: {
       id: string;
@@ -118,7 +118,6 @@ const columns: ColumnsType<DataType> = [
 
 const TableResult = () => {
   const loading: boolean = true;
-  // const [listReports, setListReports] = useState<DataType[]>([])
   const [tableParams, setTableParams] = useState<TableParams>({
     pagination: {
       current: 1,
@@ -134,37 +133,6 @@ const TableResult = () => {
       refreshWhenOffline: true,
     }
   );
-
-  // if(dataReports) {
-  //         setTableParams({
-  //       ...tableParams,
-  //       pagination: {
-  //         ...tableParams.pagination,
-  //         total: dataReports.total,
-  //       },
-  //     });
-  // }
-
-  // const getListReports = async () => {
-
-  //   setLoading(true)
-  //   const dataReport = await axios.get(``)
-  //   if(dataReport?.data) {
-  //     setListReports(dataReport.data.data)
-  //     setLoading(false)
-  //     setTableParams({
-  //       ...tableParams,
-  //       pagination: {
-  //         ...tableParams.pagination,
-  //         total: dataReport.data.total,
-  //       },
-  //     });
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getListReports()
-  // }, [JSON.stringify(tableParams)])
 
   const handleTableChange = (pagination: TablePaginationConfig) => {
     setTableParams({ pagination });

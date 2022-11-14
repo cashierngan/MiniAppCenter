@@ -4,8 +4,11 @@
     max-width: 100%;
     margin: 0 auto;
     margin-top: 40px;
+    position: relative;
     .back {
-        margin-bottom: 32px;
+        position: absolute;
+        left: 0;
+        top: 0;
         a {
             height: 32px;
             width: fit-content;
@@ -25,7 +28,22 @@
             }
         }
     }
+    .status {
+        p {
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 24px;
+            font-weight: 700;
+            &.passed {
+                color: #9ccc65;
+            }
+            &.failed {
+                color: #fd3259;
+            }
+        }
+    }
     .iframe {
+        margin-top: 32px;
         width: 100%;
         height: 100vh;
     }
