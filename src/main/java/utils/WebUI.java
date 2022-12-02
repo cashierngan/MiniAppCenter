@@ -4,10 +4,7 @@ import com.aventstack.extentreports.Status;
 import driver.DriverManager;
 import helpers.PropertiesHelper;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -84,6 +81,26 @@ public class WebUI {
         Assert.assertTrue(DriverManager.getDriver().findElement(by).isDisplayed(), message);
     }
 
+    @Step("Check {0} is displayed or not")
+    public static boolean checkVisibilityOfItem(By by){
+        try {
+            DriverManager.getDriver().findElement(by).isDisplayed();
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    @Step("Check {0} is Clickable or not")
+    public static boolean checkElementClickAbility(By by){
+        try {
+            WebUI.waitForElementClick(by);
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
+
     public static void setValue(By by, String value){
         JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
         js.executeScript("\"" + by + ".setAttribute('value'," + value + ")");
@@ -155,6 +172,11 @@ public class WebUI {
         logConsole("Open URL: " + URL);
         ExtentTestManager.logMessage(Status.PASS, "Open URL: " + URL);
         waitForPageLoaded();
+    }
+
+    @Step("Refesh current site")
+    public static void refesh(){
+        DriverManager.refesh();
     }
 
     public static String getElementText( By by){

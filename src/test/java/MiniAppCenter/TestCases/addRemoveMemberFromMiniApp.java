@@ -9,16 +9,21 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
     ExcellHelpers excel = new ExcellHelpers();
     ExcellHelpers excel1 = new ExcellHelpers();
     ExcellHelpers excel2 = new ExcellHelpers();
+    ExcellHelpers excel3 = new ExcellHelpers();
 
     @Test(priority = 1)//Add member with correct phone data
     public void addMemberIntoMiniAppSuccessWithPhoneNumber() throws Exception {
         excel.setExcelFile("datatest/Login.xlsx", "SheetLogin");
         excel1.setExcelFile("datatest/EditMiniAppMember.xlsx", "SheetEditMember");
+
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
-        getTeamSettingPage().addNewMemberIntoMiniAppPageSuccessfull(excel1.getCellData("username", 1));
+        getTeamSettingPage().addNewMemberIntoMiniAppPageSuccessful(excel1.getCellData("username", 1));
         getLogoutPage().logout();
         getLoginPage().loginSuccess(excel.getCellData("username", 15), excel.getCellData("password", 15));
         getTeamSettingPage().checkMemberWasAddIntoMiniAppPage(excel2.getCellData("miniappname", 1));
@@ -31,8 +36,11 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
-        getTeamSettingPage().addNewMemberIntoMiniAppPageSuccessfull(excel1.getCellData("username", 3));
+        getTeamSettingPage().addNewMemberIntoMiniAppPageSuccessful(excel1.getCellData("username", 3));
         getLogoutPage().logout();
         getLoginPage().loginSuccess(excel.getCellData("username", 16), excel.getCellData("password", 16));
         getTeamSettingPage().checkMemberWasAddIntoMiniAppPage(excel2.getCellData("miniappname", 1));
@@ -44,6 +52,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel1.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel1.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().addNewMemberIntoMiniAppWithNullData();
     }
@@ -55,6 +66,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().addNewMemberIntoMiniAppWithIncorrectData(excel1.getCellData("username", 2),getTeamSettingPage().informUserNotFound);
     }
@@ -66,6 +80,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().addNewMemberIntoMiniAppWithIncorrectData(excel1.getCellData("username", 1),getTeamSettingPage().inFormMemberIsAdded);
     }
@@ -77,6 +94,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().addNewMemberIntoMiniAppWithIncorrectData(excel1.getCellData("username", 4),getTeamSettingPage().informUserNotFound);
     }
@@ -88,6 +108,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().addNewMemberIntoMiniAppWithIncorrectData(excel1.getCellData("username", 5),getTeamSettingPage().inFormDataIsInvalid);
     }
@@ -99,6 +122,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().deleteExitedUser(excel1.getCellData("username", 3));
     }
@@ -110,6 +136,9 @@ public class addRemoveMemberFromMiniApp extends BaseTest {
         excel2.setExcelFile("datatest/EditMiniAppMember.xlsx", "MiniAppFolder");
         getLoginPage().loginSuccess(excel.getCellData("username", 14), excel.getCellData("password", 14));
         getDashboardPage().accessIntoAMiniApp(excel2.getCellData("miniappname", 1));
+        excel3.setExcelFile("datatest/RegisterMiniAppPlan.xlsx", "RegisterMiniAppPlan");
+        getLoginPage().loginSuccess(excel.getCellData("username", 13), excel.getCellData("password", 13));
+        getDashboardPage().accessIntoAMiniApp(excel3.getCellData("OrganizationName", 1));
         getMinIAppHomePage().goIntoTeamInfoPage();
         getTeamSettingPage().deleteExitedUser(excel1.getCellData("username", 1));
     }
