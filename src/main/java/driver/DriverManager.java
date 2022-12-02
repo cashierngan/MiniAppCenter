@@ -20,4 +20,8 @@ public class DriverManager {
         DriverManager.driver.get().quit();
         driver.remove();
     }
+
+    public static void refesh() {
+        DriverManager.getDriver().navigate().refresh();
+    }
 }
